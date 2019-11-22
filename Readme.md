@@ -256,6 +256,11 @@ Recuerda que no puedes usar frameworks CSS, sólo *vanilla css* o [*sass*](https
 
 ### Otras:
 
+* [Pildora SPA](https://www.loom.com/share/fa63a8ad0e9a43428222c15b6f6613d3)
+* [Repositorio de pildora de SPA](https://github.com/betsyvies/bootcamp-spa)
+* [Pildora de mock Firebase](https://www.youtube.com/watch?v=06myVn41OTY&t=1s)
+* [Repositorio de pildora de mock Firebase](https://github.com/Danielalab/2018-2-Testing)
+* [Pildora MVC](https://github.com/merunga/todomvc-vanillajs)
 * [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
 * [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
 * [Diseño web, responsive design y la importancia del mobile first - Media Click](https://www.mediaclick.es/blog/diseno-web-responsive-design-y-la-importancia-del-mobile-first/)
