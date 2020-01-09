@@ -50,7 +50,7 @@ En otras palabras, seguirás afianzando todo lo aprendido en el Common Core, per
 * Aplicar HTML5 semántico en tu proyecto.
 * Aplicar y reforzar los conceptos fundamentales de CSS3.
 * Implementar selectores de clase evitando la redundancia de estilos en CCS3.
-* Utilizar `flexbox` para lograr un diseño `mobile first`, implementando un layout que te permita crear un diseño adaptativo para **mobile y desktop**
+* Utilizar `flexbox` o `CSS grid layout` para lograr un diseño `mobile first`, implementando un layout que te permita crear un diseño adaptativo para **mobile y desktop**
 
 A continuación te proporcionamos el layout (diseño) de la vista mobile y desktop que deberás replicar visualmente y cuyo contenido, colores y fuentes de texto, dejaremos a tu elección.
 
@@ -94,9 +94,7 @@ El objetivo de usar Firestore en este proyecto, es que aprendes a manejar y pers
 
 ## Restricciones Técnicas
 
-* Debes utilizar `flexbox` para posicionar tus elementos. No está permitido el uso de frameworks de CCS (bootstrap), ni de componentes flotantes.
-
-* Ya te damos un diseño (layout) de la vista mobile y desktop, queremos que lo repliques a nivel *pixel perfect*, el contenido, paleta de colores y fuentes, depende de la temática que van a elegir como equipo. La implementación de ese layout deberá formar parte de la *definición de terminado* de tus historias de usuario.
+* Debes utilizar `flexbox` o `CSS grid layout` para posicionar tus elementos. No está permitido el uso de frameworks de CCS (bootstrap), ni de componentes flotantes.
 
 * Los test son **fundamentales** y deberán formar parte de tu definición de terminado, te recomendamos que comiences a implementarlos desde el comienzo.
 
@@ -148,7 +146,8 @@ anterior en la siguiente sección.
 ### HTML y CSS
 
 * [ ] [HTML semántico](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] [CSS `flexbox`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [ ] [CSS `flexbox`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) 
+* [ ] [CSS `grid layout`](https://css-tricks.com/snippets/css/complete-guide-grid/) 
 * [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
 
 ### DOM y Web APIs
