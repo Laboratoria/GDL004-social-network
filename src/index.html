@@ -1,51 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
-  <title>Document</title>
-</head>
-<body>
-  <header>
-   <nav>
-     <ul>
-       <li> <a href="#/Home"> Home</a> </li>
-       <li> <a href="#/Profile"> Profile </a> </li>
-     </ul>
-   </nav>
-  </header>
-  <section id="container"></section>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li> <a href="#/Home"> Home</a> </li>
+          <li> <a href="#/Profile"> Profile </a> </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="container"></section>
 
 
 
-  <div id="login"> 
- <h1> Empresarios</h1>
-<!--Formulario para email-->
-<div id="sing_in">
- <form>
-   <label for="email">Email</label>
-   <input id="email_answer" type="email" placeholder="@gmail.com" required />
- </form>
-<!--Formulario para contrasena-->
- <form>
-   <label for="password"> Password</label>
-   <input id="paswword_answer" type= "password" required />
- </form>
-<button type="submit"> Sing in</button>
+    <div id="login">
+      <h1> Empresarios</h1>
+      <!--Formulario para email-->
+      <div id="sing_in">
+        <form>
+          <label for="email">Email</label>
+          <input id="email_answer" type="email" placeholder="@gmail.com" required />
+        </form>
+        <!--Formulario para contrasena-->
+        <form>
+          <label for="password"> Password</label>
+          <input id="paswword_answer" type="password" required />
+        </form>
+        <button id="sing_in" type="submit"> Sing in</button>
 
-<div id="sign_up_with">
+        <div id="sign_up_with">
+          <button id="sing_chrome" type="submit">Chrome </button>
+          <button id="new_account" typpe="submit">New account</button>
+        </div>
+      </div>
+    </div>
+<!--Formulario para creear nueva cuenta-->
+    <div id="form_new_account">
+      <div id="personal_form">
+        <h1>Personal form</h1>
+        <hr>
+        <label>First name</label>
+        <input id="first_name" type="text" required>
+        <label>Last name</label>
+        <input id="last_name" type="text" requeried>
+        <br>
+        <label> <input type="radio" name="gender" value="female"> Female </label>
+        <label> <input type="radio" name="gender" value="male"> Male </label>
+        <label> <input type="radio" name="gender" value="no_gender"> Something else </label>
+        <br>
+        <label>Date of brith</label>
+        <input id="month_" type="number" min="1" max="12" placeholder="Month">
+        <input id="day_" type="number" min="1" max="31" placeholder="Day">
+        <input id="year_" type="number" min="1930" max="2012" placeholder="Year">
+        <br>
+        <label>Email</label>
+        <input id="new_email" type="text" required>
+        <label>Password</label>
+        <input id="new_password" type="text" required>
 
-  
-</div>
+        <div id="Service data">
+          <h1>Service data</h1>
+          <hr>
+          <label> Select a category:</label>
+          <select name="category">
+            <option value="healt"> Healt </option>
+            <option value="food"> Food </option>
+            <option value="pet"> Pet </option>
+          </select>
+          <br>
+          <label>Company name</label>
+          <input id="company_name" type="text">
+          <br>
+          <label>City</label>
+          <input id="city" type="text">
+          <br>
+          <label>Comment something about your company</label>
+          <textarea>
+
+          </textarea>
+        </div>
 
 
 
-</div>
-  </div>
+
+      </div>
+    </div>
+    <br>
 
 
+
+
+    </div>
+
+
+  </body>
   <script type="module" src="index.js"></script>
-  
-</html>
+
+  </html>
