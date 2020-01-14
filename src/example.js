@@ -1,3 +1,3 @@
-/*export const example = () => {
+export const example = () => {
     // aquí tu código
-}*/
+}
