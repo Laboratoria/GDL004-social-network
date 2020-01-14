@@ -39,48 +39,58 @@
       <!--Formulario para email-->
       <div id="sing_in">
         <form>
+          <!--Formulario para email-->
           <label for="email">Email</label>
           <input id="email_answer" type="email" placeholder="@gmail.com" required />
-        </form>
-        <!--Formulario para contrasena-->
-        <form>
+          <br>
+          <!--Formulario para contrasena-->
           <label for="password"> Password</label>
           <input id="paswword_answer" type="password" required />
+          <br>
+          <label> <input type="checkbox" checked="checked" name="remember"> Remember me </label>
         </form>
-        <button id="sing_in" type="submit"> Sing in</button>
-
-        <div id="sign_up_with">
-          <button id="sing_chrome" type="submit">Chrome </button>
-          <button id="new_account" typpe="submit">New account</button>
+        <div class="btn_sing_in">
+          <ul>
+            <li> <button id="sing_in" type="submit"> Sing in </button> </li>
+            <li> <button id="sing_in_chrome" type="submit"> Sing in with GoogleChrome</button> </li>
+            <li> <button onclick="document.getElementById('modal_sing_up').style.display='block'"> New account </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-<!--Formulario para creear nueva cuenta-->
-    <div id="form_new_account">
-      <div id="personal_form">
-        <h1>Personal form</h1>
-        <hr>
-        <label>First name</label>
-        <input id="first_name" type="text" required>
-        <label>Last name</label>
-        <input id="last_name" type="text" requeried>
-        <br>
-        <label> <input type="radio" name="gender" value="female"> Female </label>
-        <label> <input type="radio" name="gender" value="male"> Male </label>
-        <label> <input type="radio" name="gender" value="no_gender"> Something else </label>
-        <br>
-        <label>Date of brith</label>
-        <input id="month_" type="number" min="1" max="12" placeholder="Month">
-        <input id="day_" type="number" min="1" max="31" placeholder="Day">
-        <input id="year_" type="number" min="1930" max="2012" placeholder="Year">
-        <br>
-        <label>Email</label>
-        <input id="new_email" type="text" required>
-        <label>Password</label>
-        <input id="new_password" type="text" required>
 
-        <div id="Service data">
-          <h1>Service data</h1>
+      <!--Modal sing up-->
+      <div id='modal_sing_up' class="modal_sing_up">
+        <!--Datos personales obligatorios-->
+        <div id="personal_information">
+          <form>
+            <span onclick="document.getElementById('modal_sing_up').style.display='none'" class="close"
+              title="Close Modal">&times;</span>
+            <h1>Personal information</h1>
+            <hr>
+            <label>First name</label>
+            <input id="first_name" type="text" required>
+            <label>Last name</label>
+            <input id="last_name" type="text" requeried>
+            <br>
+            <label> <input type="radio" name="gender" value="female"> Female </label>
+            <label> <input type="radio" name="gender" value="male"> Male </label>
+            <label> <input type="radio" name="gender" value="no_gender"> Something else </label>
+            <br>
+            <label>Date of brith</label>
+            <input id="month_" type="number" min="1" max="12" placeholder="Month">
+            <input id="day_" type="number" min="1" max="31" placeholder="Day">
+            <input id="year_" type="number" min="1950" max="2012" placeholder="Year">
+            <br>
+            <label>Email</label>
+            <input id="new_email" type="text" required>
+            <label>Password</label>
+            <input id="new_password" type="text" required>
+
+        </div>
+        <!-- Datos si ofrece servicios-->
+        <div id="service_information">
+          <h1>Service information</h1>
           <hr>
           <label> Select a category:</label>
           <select name="category">
@@ -96,17 +106,33 @@
           <input id="city" type="text">
           <br>
           <label>Comment something about your company</label>
-          <textarea>
-
-          </textarea>
+          <textarea></textarea>
+          <div class="bottons_for_sing_up">
+            <button type="button" class="cancelbtn"  >Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+          </form>
         </div>
-
-
-
-
       </div>
+    
     </div>
-    <br>
+  </body>
+  <script type="module" src="index.js"> </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,5 +170,6 @@
 
 
   
+
 
   </html>
