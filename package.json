@@ -27,31 +27,20 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.6.0",
     "htmlhint": "^0.11.0",
-<<<<<<< HEAD
     "jest": "^24.9.0",
     "regenerator-runtime": "^0.13.3",
     "serve": "^11.3.0",
     "stylelint": "^13.0.0",
     "stylelint-config-recommended": "^3.0.0"
-=======
-    "jest": "^24.8.0",
-    "regenerator-runtime": "^0.13.1",
-    "serve": "^11.0.2",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended": "^2.2.0"
->>>>>>> 668799f5e1f987db4018db4fac33d86e787be57f
   },
   "directories": {
     "test": "test"
   },
-<<<<<<< HEAD
-=======
   "dependencies": {
     "bindings": "^1.5.0",
     "file-uri-to-path": "^1.0.0",
     "fsevents": "^1.2.11"
   },
->>>>>>> 668799f5e1f987db4018db4fac33d86e787be57f
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JossAcosta/GDL004-social-network.git"
@@ -61,4 +50,5 @@
     "url": "https://github.com/JossAcosta/GDL004-social-network/issues"
   },
   "homepage": "https://github.com/JossAcosta/GDL004-social-network#readme"
+  }
 }
