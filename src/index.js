@@ -1,11 +1,12 @@
-import { example } from './example.js';
 
-example();
-let email = document.getElementById("email_answer").Value
-let password = document.getElementById("paswword_answer")
+import Home from './view/Home.js';
+import Profile from './view/Profile.js';
+import EditProfile from './view/Edit-Profile.js';
 
-
-const init = () => {
-window.addEventListener("hashchange",() => console.log(window.location.hash))
+const components = {
+    home: Home,
+    profile: Profile,
+    editProfile: EditProfile
 }
-window.addEventListener('load',init)
+
+export { components};
