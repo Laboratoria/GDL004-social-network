@@ -1,3 +1,4 @@
+/* eslint-disable semi */
 // Initialize Firebase
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -34,7 +35,7 @@ const txtPassword = document.getElementById("txtPassword");
 const btnLogin = document.getElementById("btnLogin");
 const btnSignUp = document.getElementById("btnSignUp");
 const googleSignIn = document.getElementById("googleSignIn");
-const faceSignIn = document.getElementById("faceSignIn");
+const githubSignIn = document.getElementById("githubSignIn");
 
 // add login event
 btnLogin.addEventListener("click", e => {
@@ -61,20 +62,32 @@ googleSignIn.addEventListener("click", () => {
     .catch((err) => console.log(err));
 });
 
-// login with Facebook
-faceSignIn.addEventListener("click", () => {
-  const baseProviderFace = new firebase.auth.FacebookAuthProvider();
-  firebase
-    .auth()
-    .signInWithPopup(baseProviderFace)
-    .then((result) => {
+// login with GitHub
+githubSignIn.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("clickeado")
+  const providerGit = new firebase.auth.GithubAuthProvider();
+  firebase.auth().signInWithPopup(providerGit).then(function(result){
       console.log(result);
-      console.log("Success Facebook linked");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      console.log("Success GitHub linked");
+  }).catch(function(error) {
+      console.log(error);
+  });
 });
+
+// add register event
+btnSignUp.addEventListener("click", e => {
+  // get email and pass
+  console.log("click boton registro");
+  const email = txtEmail.value;
+  const pass = txtPassword.value;
+  const auth = firebase.auth();
+
+  // sing in
+  const promise = auth.createUserWithEmailAndPassword(email, pass);
+  promise.catch(e => console.log(e.message));
+});
+
 
 //
 // Main page
