@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <div class="hide">
     <header class="header_nav">
     <ul class="header_nav_list">
       <li class="header_nav-page"> <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span>  </span> </li> 
@@ -22,7 +23,7 @@
     </header>
     <main class="main_container">
     <section id="container"></section>
-  </main>
+  </main> 
   <nav class="navbar_bottom">
     <ul class="navbar_bottom_list">
       <li>  <span class="flaticon-012-house"> <a href="#/Home"> Home</a> </span></li>
@@ -30,29 +31,33 @@
       <li> <span class="flaticon-045-add"> Post</span>  </li> 
     </ul>
   </nav>
+</div>
 
 
-<section class="hide ">
+<section class=" ">
     
     <div id="login">
+      <div id="hello">
       <h1> Empresarios</h1>
+      </div>
+      
       <!--Formulario para email-->
       <div id="sing_in">
         <form>
           <!--Formulario para email-->
           <label for="email">Email</label>
-          <input id="email_answer" type="email" placeholder="@gmail.com" required />
+          <input id="email_answer" type="email" placeholder="@gmail.com" value="" required />
           <br>
           <!--Formulario para contrasena-->
           <label for="password"> Password</label>
-          <input id="paswword_answer" type="password" required />
+          <input id="paswword_answer" type="password" value="" required />
           <br>
           <label> <input type="checkbox" checked="checked" name="remember"> Remember me </label>
         </form>
         <div class="btn_sing_in">
           <ul>
-            <li> <button id="sing_in" type="submit"> Sing in </button> </li>
-            <li> <button id="sing_in_chrome" type="submit"> Sing in with GoogleChrome</button> </li>
+            <li> <button id="sing_in" type="submit" value="btn_sing_in" onclick="validar()"> Sing in </button> </li>
+            <li> <button id="sing_in_chrome" type="submit" value="btn_sing_in_hrome"> Sing in with GoogleChrome</button> </li>
             <li> <button onclick="document.getElementById('modal_sing_up').style.display='block'"> New account </button>
             </li>
           </ul>
@@ -147,8 +152,7 @@
 
   </body>
 
-  <script type="module" src="./main.js"></script>
-  
+  <script type="module" src="./main.js"></script> 
 
 
 

@@ -49,11 +49,11 @@ li {
     list-style-type: none;
 }
 
-.main_container {
+/*.main_container {
     width: 100%;
     height: 82vh;
-    background-color: #E5E4CC;
-}
+   background-color: #E5E4CC;
+} */
 
 .navbar_bottom {
     width: 100%;
@@ -77,50 +77,60 @@ li {
     color: white;
 }
 
-.hide{
-    display:none;
+.hide {
+    display: none;
+}
+
+#login {
+    background-color: cadetblue;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-image: url(/fotos/images.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+}
+
+#hello {
+    color: white;
+    height: 50%;
+
 }
 
 .modal_ing_in {
+
     padding: 3%;
     border-radius: 15px;
     background-color: #889E81;
+}
 
+/* botones del sing up */
 
-    /* botones del sing up */
-    .btn_sing_in button {
-        background-color: #E5E4CC;
-        border-radius: 10px;
+.btn_sing_in button {
+    background-color: #E5E4CC;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
 
-    }
+}
 
-    /*modal sing up */
-    .modal_sing_up {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: #474e5d;
-        padding-top: 50px;
-    }
-
-
-
-
-    #login {
-        background-color: cadetblue;
-    }
-
-    .hide {
-        display: none;
-    }
+/*modal sing up */
+.modal_sing_up {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
