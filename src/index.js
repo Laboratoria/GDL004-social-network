@@ -1,5 +1,3 @@
-import { getMaxListeners } from "cluster";
-
 // Initialize Firebase
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -13,14 +11,28 @@ const firebaseConfig = {
   measurementId: "G-CJK45C4SQ1"
 };
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+
+// App state.
+const state = {
+  "user": null
+};
+
+
+const pages = {
+  "main": document.getElementById("main"),
+  "login": document.getElementById("login")
+};
+
+
+//
+// Login Page
+//
 
 // Get elements
 const txtEmail = document.getElementById("txtEmail");
 const txtPassword = document.getElementById("txtPassword");
 const btnLogin = document.getElementById("btnLogin");
 const btnSignUp = document.getElementById("btnSignUp");
-const btnLogout = document.getElementById("btnLogout");
 const googleSignIn = document.getElementById("googleSignIn");
 const faceSignIn = document.getElementById("faceSignIn");
 
@@ -35,41 +47,6 @@ btnLogin.addEventListener("click", e => {
   const promise = auth.signInWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
 });
-
-firebase.auth().onAuthStateChanged(user => {
-  if (user) {
-    // Show main page.
-    console.log(user);
-    btnLogout.classList.remove("hide");
-  } else {
-    // Show login page.
-    console.log("not logged in");
-    btnLogout.classList.add("hide");
-  }
-});
-
-// var ref = new firebase("http:\\social-network-eedc8/");
-// var user = {
-  // email:lujannavarro26@getMaxListeners.com,
-  // password: 123456,
- //};
- //ref.createUser(user, function(error){
-  // if(error){
-    // console.log(error, code);
-  // } else {
-    //() console.log("tu usuario se ha registrado");
-   //}
-
-// });
-
- ref.authWithPassword(user);
-
-const initApp = (
-btnLogin.addEventListener("click", () => {
-  document.getElementById("pageLoginEmail").classList.toggle("hide");
-  document.getElementById("pageLoginEmail").style.display = "none";
-  document.getElementById("pageLoginSocial").style.display = "block";
-})
 
 // login with Google
 googleSignIn.addEventListener("click", () => {
@@ -97,4 +74,43 @@ faceSignIn.addEventListener("click", () => {
     .catch((err) => {
       console.log(err);
     });
+});
+
+//
+// Main page
+//
+
+const btnLogout = document.getElementById("btnLogout");
+
+btnLogout.addEventListener("click", e => {
+  firebase.auth().signOut().catch()
+});
+
+//
+// Main logic
+//
+
+const togglePage = (name) => {
+  Object.keys(pages).forEach((key) => pages[key].classList.toggle("hide", key !== name));
+}
+
+const showLoginPage = () => {
+  togglePage("login");
+}
+
+const showMainPage = () => {
+  togglePage("main");
+}
+
+firebase.auth().onAuthStateChanged(user => {
+  state.user = user;
+  if (user) {
+    // Show main page.
+    console.log("User logged in", user);
+    showMainPage();
+  } else {
+    // Show login page.
+    console.log("User not logged in");
+    showLoginPage();
+  }
 });
