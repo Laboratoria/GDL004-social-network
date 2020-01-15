@@ -5,7 +5,7 @@
 
 body {
     background-color: #E5E4CC;
-    text-align: center;
+    
 }
 
 .header_nav {
@@ -14,6 +14,7 @@ body {
     padding: 10px;
     background-color: #698474;
     color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header_nav_list {
@@ -61,6 +62,7 @@ li {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     padding: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .navbar_bottom_list {
@@ -111,4 +113,82 @@ li {
 
     #login {
         background-color: cadetblue;
+    }
+/*components template string */
+    .container_user{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        display: grid;
+        margin-top: 1px;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 50%  20% 15% 15%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .profile_information{
+        grid-column: 1/2;
+        grid-row: 1/5;
+        
+    }
+    .profile_information span{
+        
+    }
+    .profile_description{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        padding-top: 2%;
+        padding-bottom: 5%;
+
+          
+    }
+    .profile_direction{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        
+    }
+    .profile_pesornal_information{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        padding-top: 2%;
+        padding-bottom: 5%;
+       
+
+    }
+    .profile_icons{
+        grid-column: 2/3;
+        grid-row: 4/5;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        
+
+    }
+    .container_post{
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 80%  20%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Ubuntu', sans-serif;
+        
+    }
+    .profile_post{
+        grid-column: 2/3;
+        grid-row:1/2;
+        
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+    }
+    .profile_post_icons{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        
     }
