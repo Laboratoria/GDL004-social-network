@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src\\view-controller"
   ],
-  "SelectedNode": "\\src\\index.html",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
