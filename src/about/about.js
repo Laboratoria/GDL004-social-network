@@ -1,7 +1,5 @@
 /*querySelector's de showAbout*/
 document.querySelector('.back').addEventListener('click', () => {
-  console.log('Regresa a la pagina /Home.');
-  //funcion que te regrese a home.
 });
 /* Template dinamico de About
 export const showAbout = () => {
