@@ -24,9 +24,15 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
+<<<<<<< HEAD
+        font-size: 30px;
+font-style: normal;
+margin: 20px 0px 20px 10px;
+=======
         font-size: 20px;
 font-style: normal;
 margin-left: 20px;
+>>>>>>> 4a5a3d56c7bd7851eb022d9a023e7ad4f70b189e
 }
 
 .flaticon-001-disabled:before { content: "\f100"; }

@@ -1,11 +1,14 @@
 export default () => {
     const viewHome = `
-  <h2 class="text-center">¡Bienvenido a nuestra página!
-   HOLA SOY EL HOME </h2>
-  `;
-
-    const divElemt = document.createElement('div');
+    <div class='container'>
+        <h2> ¡Soy el home </h2>
+        <figure> <img src="/" alt="home"> </figure>
+        
+    </div>`
     
-    divElemt.innerHTML = viewHome;
-    return divElemt;
-};
+
+    const divElem = document.createElement('div')
+    divElem.innerHTML = viewHome;
+
+    return divElem;
+}
