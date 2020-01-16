@@ -75,42 +75,21 @@ li {
     text-decoration: none;
     color: white;
 }
-
-.hide {
-    display: none;
+/*Components template string  */
+.container{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: grid;
+    margin-top: 10px;
 }
+.profile_information{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5(1fr);
 
-.modal_ing_in {
-    padding: 3%;
-    border-radius: 15px;
-    background-color: #889E81;
 }
-    /* botones del sing up */
-    .btn_sing_in button {
-        background-color: #E5E4CC;
-        border-radius: 10px;
-    }
-
-    /*modal sing up */
-    .modal_sing_up {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: #474E5D;
-        padding-top: 50px;
-    }
-
+.profile_description{
+}
     #login {
         background-color: cadetblue;
     }
@@ -192,3 +171,6 @@ li {
         padding-bottom: 5%;
         
     }
+.hide{
+    display: none;
+}

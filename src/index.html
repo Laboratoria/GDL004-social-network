@@ -1,6 +1,5 @@
-  <!DOCTYPE html>
-  <html lang="en">
-
+﻿<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +7,33 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="./561153-web-essentials/font/flaticon.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-    
+
     <title>social-network</title>
   </head>
 
   <body>
+    <div class='hide' id="spa">
     <header class="header_nav">
     <ul class="header_nav_list">
-      <li class="header_nav-page"> <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span>  </span> </li> 
+      <li class="header_nav-page"> <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span>  </span> </li>
       <li class="header_nav-user"> <span class="flaticon-051-user"><a href="#/EditProfile"> User</a>  </span> </li>
     </ul>
-      
     </header>
     <main class="main_container">
     <section id="container"></section>
-  </main>
-  <nav class="navbar_bottom">
-    <ul class="navbar_bottom_list">
-      <li>  <span class="flaticon-012-house"> <a href="#/Home"> Home</a> </span></li>
-      <li> <span class="flaticon-036-zoom"> Search</span>  </li> 
-      <li> <span class="flaticon-045-add"> Post</span>  </li> 
-    </ul>
-  </nav>
+    </main>
+    <nav class="navbar_bottom">
+       <ul class="navbar_bottom_list">
+        <li>  <span class="flaticon-012-house"> <a href="#/Home"> Home</a> </span></li>
+        <li> <span class="flaticon-036-zoom"> Search</span>  </li>
+        <li> <span class="flaticon-045-add"> Post</span>  </li>
+       </ul>
+    </nav>
+  </div>
 
 
-<section class="hide ">
-    
+<section class="" id ="first_page">
+
     <div id="login">
       <h1> Empresarios</h1>
       <!--Formulario para email-->
@@ -41,26 +41,26 @@
         <form>
           <!--Formulario para email-->
           <label for="email">Email</label>
-          <input id="email_answer" type="email" placeholder="@gmail.com" required />
+          <input id="email_answer" type="email" value="" placeholder="@gmail.com" required />
           <br>
           <!--Formulario para contrasena-->
           <label for="password"> Password</label>
-          <input id="paswword_answer" type="password" required />
+          <input id="paswword_answer" type="password" value="" required />
           <br>
           <label> <input type="checkbox" checked="checked" name="remember"> Remember me </label>
         </form>
         <div class="btn_sing_in">
           <ul>
-            <li> <button id="sing_in" type="submit"> Sing in </button> </li>
-            <li> <button id="sing_in_chrome" type="submit"> Sing in with GoogleChrome</button> </li>
+            <li> <button id="btn_sing_in" type="submit"  > Sing in </button> </li>
+            <li> <button id="btn_sing_in_chrome" type="submit"> Sing in with GoogleChrome</button> </li>
             <li> <button onclick="document.getElementById('modal_sing_up').style.display='block'"> New account </button>
             </li>
           </ul>
         </div>
       </div>
-
+    </section>
       <!--Modal sing up-->
-      <div id='modal_sing_up' class="modal_sing_up">
+      <div id='modal_sing_up' class="modal_sing_up  ">
         <!--Datos personales obligatorios-->
         <div id="personal_information">
           <form>
@@ -71,7 +71,7 @@
             <label>First name</label>
             <input id="first_name" type="text" required>
             <label>Last name</label>
-            <input id="last_name" type="text" requeried>
+            <input id="last_name" type="text" requeried/>
             <br>
             <label> <input type="radio" name="gender" value="female"> Female </label>
             <label> <input type="radio" name="gender" value="male"> Male </label>
@@ -83,9 +83,9 @@
             <input id="year_" type="number" min="1950" max="2012" placeholder="Year">
             <br>
             <label>Email</label>
-            <input id="new_email" type="text" required>
+            <input id="new_email" type="text" value="" required>
             <label>Password</label>
-            <input id="new_password" type="text" required>
+            <input id="new_password" type="text" value=""  required>
 
         </div>
         <!-- Datos si ofrece servicios-->
@@ -109,67 +109,83 @@
           <textarea></textarea>
           <div class="bottons_for_sing_up">
             <button type="button" class="cancelbtn"  >Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+            <button type="submit" class="signupbtn" onclick="newAccount()">Sign Up</button>
           </div>
           </form>
         </div>
       </div>
-    
+
     </div>
   </body>
-  <script type="module" src="index.js"> </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script type="module" src="index.js"> </script>
     </div>
   </section>
-
-
-
-
-
 
   </body>
 
   <script type="module" src="./main.js"></script>
-  
+ </html>
+
+</body>
+<script type="module" src="./index.js"></script>
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB6jtWov3iCLYOcaTFHErANCRdCcAR5Hcc",
+            authDomain: "emprenderizate-86314.firebaseapp.com",
+            databaseURL: "https://emprenderizate-86314.firebaseio.com",
+            projectId: "emprenderizate-86314",
+            storageBucket: "emprenderizate-86314.appspot.com",
+            messagingSenderId: "581493268608",
+            appId: "1:581493268608:web:8f0e920a59b05d8d3b4665",
+            measurementId: "G-5S6ZBV4F8V"
+        };
+        // Initialize Firebase
+        var proyect = firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+/*
+ let spa = document.getElementById('spa');
+ let first_page= document.getElementById("first_page");
+      function enviar(){
+          let email = document.getElementById("email_answer").value;
+          let password = document.getElementById("paswword_answer").value;
+
+          alert('hey  ')
+          console.log(email);
+          firebase.auth().createUserWithEmailAndPassword(email, password)
+          .catch(function(error) {
+
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+          });
+        }
+        function enviar(){
+            let email = document.getElementById("email_answer").value;
+            let password = document.getElementById("paswword_answer").value;
 
 
+            console.log(email);
+            firebase.auth().signInWithEmailAndPassword(email, password)
+            .catch(function(error) {
 
+              var errorCode = error.code;
+              var errorMessage = error.message;
 
+            });
+            first_page.classList.add("hide");
+            spa.classList.remove('hide');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-  </html>
+          }
+          */
+    </script>
+</html>
