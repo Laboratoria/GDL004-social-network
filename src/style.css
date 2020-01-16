@@ -1,0 +1,15 @@
+.center,
+h1 {
+  text-align: center;
+  margin-top: 5%;
+  font-family: "Nothing You Could Do", cursive;
+}
+#pageLoginSocial {
+    text-align: center;
+}
+.logosocialmedia {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
