@@ -14,7 +14,6 @@ body {
     padding: 10px;
     background-color: #698474;
     color: white;
-
 }
 
 .header_nav_list {
@@ -32,7 +31,6 @@ body {
     display: flex;
     justify-content: flex-start;
     padding-left: 10px;
-
 }
 
 .header_nav-page a {
@@ -63,7 +61,6 @@ li {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     padding: 10px;
-
 }
 
 .navbar_bottom_list {
@@ -80,15 +77,19 @@ li {
 .hide {
     display: none;
 }
+
 /* ---------------------------------------------------------*/
-@media only screen and (max-width: 600px) { 
-      body {
-      background-color: lightblue;
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
     }
-    .hello{ height: 20%; background-color: chocolate;
+
+    .hello {
+        height: 20%;
+        background-color: chocolate;
 
     }
-  }
+}
 
 
 
@@ -100,7 +101,7 @@ li {
 /* botones del sing up */
 
 .btn_sing_in button {
-   
+
 }
 
 /*modal sing up */
@@ -121,4 +122,23 @@ li {
     /* Enable scroll if needed */
     background-color: #474e5d;
     padding-top: 50px;
+}
+
+/*Components template string  */
+.container {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: grid;
+    margin-top: 10px;
+}
+
+.profile_information {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5(1fr);
+
+}
+
+.profile_description {
+
 }

@@ -27,11 +27,13 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.6.0",
     "htmlhint": "^0.11.0",
+
     "jest": "^24.8.0",
     "regenerator-runtime": "^0.13.1",
     "serve": "^11.0.2",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
+
   },
   "directories": {
     "test": "test"
