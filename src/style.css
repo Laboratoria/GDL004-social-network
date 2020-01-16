@@ -80,39 +80,27 @@ li {
 .hide {
     display: none;
 }
+/* ---------------------------------------------------------*/
+@media only screen and (max-width: 600px) { 
+      body {
+      background-color: lightblue;
+    }
+    .hello{ height: 20%; background-color: chocolate;
 
-#login {
-    background-color: cadetblue;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-image: url(/fotos/images.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    position: relative;
-}
+    }
+  }
 
-#hello {
-    color: white;
-    height: 50%;
 
-}
+
 
 .modal_ing_in {
 
-    padding: 3%;
-    border-radius: 15px;
-    background-color: #889E81;
 }
 
 /* botones del sing up */
 
 .btn_sing_in button {
-    background-color: #E5E4CC;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-
+   
 }
 
 /*modal sing up */
@@ -123,11 +111,11 @@ li {
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
+    left: auto;
+    top: auto;
+    width: 50%;
     /* Full width */
-    height: 100%;
+    height: 50%;
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
