@@ -11,23 +11,35 @@
 <body>
   <div class="container">
     <section>
-      <p>Regístrate con tu correo.</p>
-      Email:<br>
-      <input id="email" type="email" class="email"/><br>
-      Password:<br>
-      <input id="password" type="password" class="password"/><br>
-      <button class="signUp">Sign Up</button>
-      <p>or</p>
-      <img id="facebookSignUp"class="facebook" src="https://bit.ly/2tkJaEM" width="40px">
-      <img id="twitterSignUp"class="twitter" src="https://bit.ly/2u0PiCc" width="40px">
-      <img id="googleSignUp"class="google" src="https://bit.ly/2RhF3Br" width="40px">
-      <img id="githubSignUp"class="github" src="https://bit.ly/378Mpxy" width="40px">
-    </section>
+      <div class="email">
+        <i class="material-icons">mail_outline</i>
+        <input id="email" type="email" class="emailInput" placeholder=": Choose your e-mail"/><br>
+      </div>
+      <div class="password">
+        <i class="material-icons">vpn_key</i>
+        <input id="password" type="password" class="passwordInput"placeholder=": Choose your password"/><br>
+     </div>
+       <button class="signUp"><i class="material-icons">fingerprint</i><br>Sign Up</button>
+       </section>
+      <nav>
+        <p>or<br></p>
+        <div>
+          <img id="facebookSignUp"class="facebook" src="https://bit.ly/2tkJaEM" width="40px">
+          <img id="twitterSignUp"class="twitter" src="https://bit.ly/2u0PiCc" width="40px">
+          <img id="googleSignUp"class="google" src="https://bit.ly/2RhF3Br" width="40px">
+          <img id="githubSignUp"class="github" src="https://bit.ly/378Mpxy" width="40px">
+        </div>
+      </nav>
+      <footer>
+      <button class="back"><i class="material-icons">first_page</i></button>
+    </footer>
   </div>
 </body>
-<script type="module" src="signUp.js"></script>
+
 <!-- aqui empiezan a ir los links de Firebase -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+<script src="../Firebase/firebase.js"></script>
+<script type="module" src="signUp.js"></script>
 </html>

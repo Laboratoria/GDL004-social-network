@@ -1,28 +1,31 @@
 /*querySelector's de showSignUp*/
  document.querySelector('.signUp').addEventListener('click', () => {
    console.log('Este boton tomara los valores de email y pasword para Firebase.');
- /*let email = document.getElementById('email').value;
- let password = document.getElementById('password').value;
- createUser(email, password);*/
+   let email = document.getElementById('email').value;
+   let password = document.getElementById('password').value;
+   createUser(email, password);
+   console.log('El email y password son:' + email + password);
  });
  document.querySelector('.facebook').addEventListener('click', () => {
    console.log('Este boton le mostrara al user el pop-up de FB.');
-     /*logInWithFacebook();*/
+   logInWithFacebook();
 });
 document.querySelector('.twitter').addEventListener('click', () => {
   console.log('Este boton le mostrara al user el pop-up de Twitter.');
-     /*logInWithTwitter();*/
+  logInWithTwitter();
 });
 document.querySelector('.google').addEventListener('click', () => {
   console.log('Este boton le mostrara al user el pop-up de Google.');
-     /*logInWithGoogle();*/
+  logInWithGoogle();
 });
 document.querySelector('.github').addEventListener('click', () => {
   console.log('Este boton le mostrara al user el pop-up de GitHub.');
-     /*logInWithGithub();*/
+  logInWithGithub();
 });
-
-
+document.querySelector('.back').addEventListener('click', () => {
+  console.log('Regresa a la pagina /Home.');
+  //funcion que te regrese a home.
+});
 /* Template dinamico de signUp
 export const showSignUp = () => {
       let container = document.querySelector('.container');

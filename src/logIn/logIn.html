@@ -10,18 +10,24 @@
 </head>
 <body>
   <div class="container">
-    <section>
-      Email:<br>
-      <input id="email" type="email" class="email"/><br>
-      Password:<br>
-      <input id="password" type="password" class="password"/><br>
-      <button class="logIn">Log In</button>
-   </section>
+      <div class="email">
+        <i class="material-icons">mail_outline</i>
+        <input id="email" type="email" class="emailInput" placeholder=": Enter an e-mail"/><br>
+      </div>
+      <div class="password">
+        <i class="material-icons">vpn_key</i>
+        <input id="password" type="password" class="passwordInput" placeholder=": Enter your password"/><br>
+      </div>
+      <nav>
+        <button class="logIn"><i class="material-icons">fingerprint</i><br>LogIn</button>
+        <button class="back"><i class="material-icons">first_page</i></button>
+      </nav>
   </div>
 </body>
-<script type="module" src="logIn.js"></script>
 <!-- aqui empiezan a ir los links de Firebase -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+<script src="../Firebase/firebase.js"></script>
+<script type="module" src="logIn.js"></script>
 </html>

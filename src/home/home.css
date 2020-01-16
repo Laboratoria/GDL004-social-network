@@ -26,11 +26,12 @@ nav {
   height: 100vh;
   display: grid;
   grid-template-columns: 25% auto 25%;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    '. about .'
+    '. . .'
     '. main .'
-    '. nav .';
+    '. nav .'
+    '. . .';
 }
 #circle {
   width: 200px;

@@ -1,9 +1,13 @@
 /*querySelector's de showLogIn*/
 document.querySelector('.logIn').addEventListener('click', () => {
  console.log('Este boton agarra los values de email y password hacia Firebase.')
-//let email = document.getElementById('email').value;
-//let password = document.getElementById('password').value;
-//logInUserFirebase(email, password);
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  logInUserFirebase(email, password);
+});
+document.querySelector('.back').addEventListener('click', () => {
+  console.log('Regresa a la pagina /Home.');
+  //funcion que te regrese a home.
 });
 
 /* Template Dinamica de LogIn

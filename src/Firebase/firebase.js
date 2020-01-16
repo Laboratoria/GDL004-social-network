@@ -56,7 +56,6 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 }
 //LogIn with Twitter's account
 const logInWithTwitter = () => {
-  //LogIn with Twitter's account
   const logInWithTwitter = () => {
     var provider = new firebase.auth.TwitterAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
