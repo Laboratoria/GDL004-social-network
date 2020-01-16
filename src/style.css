@@ -78,3 +78,19 @@ li{
     text-decoration: none;
     color: white;
 }
+/*Components template string  */
+.container{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: grid;
+    margin-top: 10px;
+}
+.profile_information{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5(1fr);
+
+}
+.profile_description{
+
+}
