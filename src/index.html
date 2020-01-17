@@ -21,13 +21,16 @@
       </ul>
     </header>
     <main class="main_container">
-      <section id="container"></section>
+      <section id="container">  
+        
+      </section>
     </main>
     <nav class="navbar_bottom">
       <ul class="navbar_bottom_list">
         <li> <span class="flaticon-012-house"> <a href="#/Home"> Home</a> </span></li>
         <li> <span class="flaticon-036-zoom"> Search</span> </li>
         <li> <span class="flaticon-045-add"> Post</span> </li>
+        <li> <button id=log-out type="submit"> SALIRRRRR </button> </li>
       </ul>
     </nav>
   </div>
@@ -35,11 +38,11 @@
     <div id="login">
       <h1> Empresarios</h1>
       <!--Formulario para email-->
-      <div id="sing_in">
+      <div id="sing_in" class="signIn">
         <form>
           <!--Formulario para email-->
           <label for="email">Email</label>
-          <input id="email_answer" type="email" value="" placeholder="@gmail.com" required />
+          <input  id="email_answer" type="email" value="" placeholder="@gmail.com" required />
           <br>
           <!--Formulario para contrasena-->
           <label for="password"> Password</label>
@@ -51,6 +54,7 @@
           <ul>
             <li> <button id="btn_sing_in" type="submit"> Sing in </button> </li>
             <li> <button id="btn_sing_in_chrome" type="submit"> Sing in with GoogleChrome</button> </li>
+            <li> <button id="btn_sing_in_fb" type="submit"> Sing in with Facebook</button> </li>
             <li> <button onclick="document.getElementById('modal_sing_up').style.display='block'"> New account </button>
             </li>
           </ul>
@@ -105,7 +109,7 @@
       <label>Comment something about your company</label>
       <textarea></textarea>
       <div class="bottons_for_sing_up">
-        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="button"  class="cancelbtn" onclick="" >Cancel</button>
         <button type="submit" class="signupbtn" onclick="newAccount()">Sign Up</button>
       </div>
       </form>
@@ -121,7 +125,7 @@
 
 </html>
 </body>
-<script type="module" src="./index.js"></script>
+
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
