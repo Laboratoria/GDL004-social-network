@@ -1,8 +1,6 @@
-/*querySelector's de showAbout*/
 document.querySelector('.back').addEventListener('click', () => {
 });
-/* Template dinamico de About
-export const showAbout = () => {
+/* export const showAbout = () => {
     let container = document.querySelector('.container');
     container.innerHTML = '';
     const template = `
@@ -14,5 +12,4 @@ export const showAbout = () => {
     </section>
     `
     container.innerHTML = template;
-  }
-*/
+  } */

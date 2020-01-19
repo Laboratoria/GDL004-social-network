@@ -20,6 +20,7 @@ body {
 }
 .emailInput {
   background: rgba(0, 0, 0, 0);
+  color: #d2d2d2;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -39,6 +40,7 @@ body {
 }
 .passwordInput {
   background: rgba(0, 0, 0, 0);
+  color: #d2d2d2;
   border-top: none;
   border-left: none;
   border-right: none;

@@ -33,86 +33,28 @@ firebase.auth().signInWithEmailAndPassword(email, password)
     console.error(error);
   });
 }
-//LogIn with Facebook's accout
-const logInWithFacebook = () => {
-  var provider = new firebase.auth.FacebookAuthProvider();
-firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  //template logeado observador de estado de autenticacion
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-}
-//LogIn with Twitter's account
-const logInWithTwitter = () => {
-  const logInWithTwitter = () => {
-    var provider = new firebase.auth.TwitterAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
-      // You can use these server side with your app's credentials to access the Twitter API.
-      var token = result.credential.accessToken;
-      var secret = result.credential.secret;
-      // The signed-in user info.
-      var user = result.user;
-      // ...
-    }).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-      // ...
-    });
+// LogIn with another social network's account
+const providerFacebook = new firebase.auth.FacebookAuthProvider();
+const providerTwitter = new firebase.auth.TwitterAuthProvider();
+const providerGoogle = new firebase.auth.GoogleAuthProvider();
+const providerGitHub = new firebase.auth.GithubAuthProvider();
+
+const logInWithProvider = (provider) => {
+  switch (provider) {
+    case 1: firebase.auth().signInWithPopup(providerFacebook); break;
+    case 2: firebase.auth().signInWithPopup(providerTwitter); break;
+    case 3: firebase.auth().signInWithPopup(providerGoogle); break;
+    case 4: firebase.auth().signInWithPopup(providerGitHub); break;
   }
-}
-const logInWithGoogle = () => {
-  var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-}
-const logInWithGithub = () => {
-  var provider = new firebase.auth.GithubAuthProvider();
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-}
+};
+/* const token = result.credential.accessToken;
+const user = result.user;
+}).catch(function (error) {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+  // The email of the user's account used.
+  const email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  const credential = error.credential;
+  // ...
+}); */

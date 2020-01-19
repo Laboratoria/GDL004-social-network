@@ -1,21 +1,23 @@
 /*querySelector's de showSignUp*/
- document.querySelector('.signUp').addEventListener('click', () => {
+ document.querySelector('.signUpFirebase').addEventListener('click', () => {
    let email = document.getElementById('email').value;
    let password = document.getElementById('password').value;
    createUser(email, password);
  });
- document.querySelector('.facebook').addEventListener('click', () => {
-   logInWithFacebook();
-});
-document.querySelector('.twitter').addEventListener('click', () => {
-  logInWithTwitter();
-});
-document.querySelector('.google').addEventListener('click', () => {
-  logInWithGoogle();
-});
-document.querySelector('.github').addEventListener('click', () => {
-  logInWithGithub();
-});
+ 
+ const signUpButtons = document.querySelectorAll('.signUp');
+ signUpButtons.forEach(button => {
+   button.addEventListener('click', (event) => {
+     let x = event.target.id;
+     switch (x) {
+       case 'facebook': logInWithProvider(1); break;
+       case 'twitter' : logInWithProvider(2); break;
+       case 'google' : logInWithProvider(3); break;
+       case 'github' : logInWithProvider(4); break;
+     }
+   });
+ });
+
 document.querySelector('.back').addEventListener('click', () => {
   //funcion que te regrese a home.
 });

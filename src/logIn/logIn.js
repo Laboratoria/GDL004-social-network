@@ -1,11 +1,10 @@
-/*querySelector's de showLogIn*/
 document.querySelector('.logIn').addEventListener('click', () => {
-  let email = document.getElementById('email').value;
-  let password = document.getElementById('password').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
   logInUserFirebase(email, password);
 });
 document.querySelector('.back').addEventListener('click', () => {
-  //funcion que te regrese a home.
+  // funcion que te regrese a home.
 });
 
 /* Template Dinamica de LogIn
@@ -20,5 +19,4 @@ export const showLogIn = () => {
    <button class="logIn">Log In</button>
    `
    container.innerHTML = template;
- }
- */
+ } */
