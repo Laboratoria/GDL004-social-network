@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\src",
     "\\src\\view-controller"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\style.css",
   "PreviewInSolutionExplorer": false
 }
