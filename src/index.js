@@ -18,6 +18,7 @@ let singIn = document.getElementById("btn_sing_in");
 let singInChrome = document.getElementById ("btn_sing_in_chrome");
 
 //Crear cuenta
+
       function newAccount(){
           firebase.auth().createUserWithEmailAndPassword(emailNew, passwordNew)
           .catch(function(error) {
@@ -47,26 +48,29 @@ let singInChrome = document.getElementById ("btn_sing_in_chrome");
       // [START authwithemail]
       firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        let errorCode = error.code;
+        let errorMessage = error.message;
         // [START_EXCLUDE]
         if (errorCode === 'auth/wrong-password') {
           alert('Wrong password.');
 
         } else if (errorCode !== 'auth/wrong-password'){
         first_page.classList.add("hide");
-        spa.classList.remove('hide');
+       spa.classList.remove('hide');
 
       }
         else {
           alert(errorMessage);
         }
         console.log(error);
-        document.getElementById('btn_sing_in').disabled = false;
+      document.getElementById('btn_sing_in').disabled = false;
         // [END_EXCLUDE]
+
       });
       // [END authwithemail]
-   document.getElementById('btn_sing_in').disabled = true;
+      console.log('ya entre');
+
+  document.getElementById('btn_sing_in').disabled = true;
   });
 
   /*  if(email === "" || password ==""){

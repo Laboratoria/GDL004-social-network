@@ -115,15 +115,21 @@
         </div>
       </div>
 
-    <!--Modal to search information in the muro page, this section is editable>
+    <!--Modal to Post information in the muro page, this section is editable>
 
     </section>-->
-    </div>
-    <div id="modal_to_search" class="modal_to_search">
-      <input type="text" value="Titulo de publicacion" id="text_title"></input>
-      <img
-
-
+  </div>
+    <div id="modal_to_tpost" class="modal_to_tpost">
+      <div class="post">
+        <form id="form_tPost">
+          <label for="title-input">Title Post</label>
+          <input name="tPost" type="text" id="title-input" placeholder="tPost" required>
+        </div>
+        <div class="post">
+					<label for="form-post">Post</label>
+					<input name="Post" type="text" id="post" placeholder="Descripción corta">
+			  </div>
+    </form>
     </div>
   </body>
 <script type="module" src="index.js"> </script>
