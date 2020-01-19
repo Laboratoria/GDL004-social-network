@@ -78,7 +78,7 @@ let singInChrome = document.getElementById ("btn_sing_in_chrome");
     }*/
 
 // Sing in to Google
-
+/*
 singInChrome.addEventListener("click", ()=>{
   var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -115,3 +115,4 @@ firebase.auth().onAuthStateChanged(function(user) {
     // No user is signed in.
   }
 });
+*/
