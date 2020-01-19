@@ -1,10 +1,12 @@
 // singIn
-import {email, password} from '../index.js';
+
 
 export  function signInEmail(email, password ){ 
-    console.log(email, password);
+    firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+        console.log('ya entre');
+    });
     
-    console.log(email, password);
+    
     if (email.length < 4) {
     alert('Please enter an email address.');
     return;
@@ -12,13 +14,10 @@ export  function signInEmail(email, password ){
 if (password.length < 4) {
     alert('Please enter a password.');
     return;
+
+
 }
 
-
-firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-    first_page.classList.add("hide");
-        spa.classList.remove('hide');
-});
 
   
 /*
