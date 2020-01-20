@@ -12,168 +12,23 @@
   </head>
 
   <body>
-    <div class='hide' id="spa">
-      <header class="header_nav">
-        <ul class="header_nav_list">
-          <li class="header_nav-page"> <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span>  </span> </li>
-          <li class="header_nav-user"> <span class="flaticon-051-user"><a href="#/EditProfile"> User</a>  </span> </li>
-        </ul>
-      </header>
+  
       <main class="main_container">
         <section id="container"></section>
       </main>
-      <nav class="navbar_bottom">
-        <ul class="navbar_bottom_list">
-          <li>  <span class="flaticon-012-house"> <a href="#/Home"> Home</a> </span></li>
-          <li> <span class="flaticon-036-zoom"> Search</span>  </li>
-          <li> <span class="flaticon-045-add"> Post</span>  </li>
-       </ul>
-     </nav>
-   </div>
-
-
-   <section class="" id ="first_page">
-
-    <div id="login">
-      <h1> Empresarios</h1>
-      <!--Formulario para email-->
-      <div id="sing_in">
-        <form>
-          <!--Formulario para email-->
-          <label for="email">Email</label>
-          <input id="email_answer" type="email" value="" placeholder="@gmail.com" required />
-          <br>
-          <!--Formulario para contrasena-->
-          <label for="password"> Password</label>
-          <input id="paswword_answer" type="password" value="" required />
-          <br>
-          <label> <input type="checkbox" checked="checked" name="remember"> Remember me </label>
-        </form>
-        <div class="btn_sing_in">
-          <ul>
-            <li> <button id="btn_sing_in" type="submit"  > Sing in </button> </li>
-            <li> <button id="btn_sing_in_chrome" type="submit"> Sing in with Google Chrome</button> </li>
-            <li> <button onclick="document.getElementById('modal_sing_up').style.display='block'"> New account </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-      <!--Modal sing up-->
-      <div id='modal_sing_up' class="modal_sing_up  ">
-        <!--Datos personales obligatorios-->
-        <div id="personal_information">
-          <form>
-            <span onclick="document.getElementById('modal_sing_up').style.display='none'" class="close"
-              title="Close Modal">&times;</span>
-            <h1>Personal information</h1>
-            <hr>
-            <label>First name</label>
-            <input id="first_name" type="text" required>
-            <label>Last name</label>
-            <input id="last_name" type="text" requeried/>
-            <br>
-            <label> <input type="radio" name="gender" value="female"> Female </label>
-            <label> <input type="radio" name="gender" value="male"> Male </label>
-            <label> <input type="radio" name="gender" value="no_gender"> Something else </label>
-            <br>
-            <label>Date of brith</label>
-            <input id="month_" type="number" min="1" max="12" placeholder="Month">
-            <input id="day_" type="number" min="1" max="31" placeholder="Day">
-            <input id="year_" type="number" min="1950" max="2012" placeholder="Year">
-            <br>
-            <label>Email</label>
-            <input id="new_email" type="text" value="" required>
-            <label>Password</label>
-            <input id="new_password" type="text" value=""  required>
-
-        </div>
-        <!-- Datos si ofrece servicios-->
-        <div id="service_information">
-          <h1>Service information</h1>
-          <hr>
-          <label> Select a category:</label>
-          <select name="category">
-            <option value="healt"> Healt </option>
-            <option value="food"> Food </option>
-            <option value="pet"> Pet </option>
-          </select>
-          <br>
-          <label>Company name</label>
-          <input id="company_name" type="text">
-          <br>
-          <label>City</label>
-          <input id="city" type="text">
-          <br>
-          <label>Comment something about your company</label>
-          <textarea></textarea>
-          <div class="bottons_for_sing_up">
-            <button type="button" class="cancelbtn"  >Cancel</button>
-            <button type="submit" class="signupbtn" onclick="newAccount()">Sign Up</button>
-          </div>
-          </form>
-        </div>
-      </div>
-
-    <!--Modal to Post information in the muro page, this section is editable>
-
-    </section>-->
-  </div>
-    <div id="modal_to_tpost" class="modal_to_tpost">
-      <div class="post">
-        <form id="form_tPost">
-          <label for="title-input">Title Post</label>
-          <input name="tPost" type="text" id="title-input" placeholder="tPost" required>
-        </div>
-        <div class="post">
-					<label for="form-post">Post</label>
-					<input name="Post" type="text" id="post" placeholder="Descripción corta">
-			  </div>
-    </form>
-    </div>
-  </body>
-<script type="module" src="index.js"> </script>
-    </div>
-  </section>
+     
 
   </body>
 
   <script type="module" src="./main.js"></script>
- </html>
-develop
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="./561153-web-essentials/font/flaticon.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-  <title>social-network</title>
-</head>
-
-<body>
-  
-    <main class="main_container">
-        <button id="btn_test" >hey soy el boton</button>
-       
-              <button > <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span> 
-              </button>
-              <button > <span class="flaticon-051-user"><a href="#/EditProfile"> User</a> </span> 
-              </button>
-              <button> <a href="#/Home"> Home</a> </button>
-              <button id=log-out><a href=""> Salir</a> </button> 
-            
-      <section id="container">  
-       
-      </section>
-    </main>
     
     <script type="module" src="./main.js"></script>
     <script type="module" src="./index.js"></script>
     
 </body>
 
+</html>
 
 
 </html>

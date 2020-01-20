@@ -21,7 +21,7 @@ export default () => {
             <li> <span class="flaticon-012-house"> <a href="#/Home"> Home</a> </span></li>
             <li> <span class="flaticon-036-zoom"> Search</span> </li>
             <li> <span class="flaticon-045-add"> Post</span> </li>
-            <li> <button id=log-out type="submit"> SALIRRRRR </button> </li>
+            <li> <button id=log-out type="submit"> <a href="">SALIRRRRR </button> </li>
           </ul>
         </nav>
       </div>
