@@ -1,4 +1,15 @@
-import { login } from "../index.js";
+import  {autEmailPass} from '../models/auth.js';
+
+const login =()=>{
+    const email= document.getElementById('email_answer');
+    const password= document.getElementById('password_answer');
+    
+     if (email.value !="" && password.value !=""){
+     console.log(email.value, password.value);
+      autEmailPass(email.value, password.value);
+    } 
+}
+
 
 export default () => {
 const inputEmail = document.createElement("INPUT");
@@ -21,8 +32,8 @@ btn.setAttribute('id', 'btn_sing_in');
 document.body.appendChild(btn);   
 //btn.setAttribute("onclick", "hey()")
 
-const formu = document.createElement("form");
-formu.setAttribute('id', 'form-sign');// creamos el formulario
+const formu = document.createElement("div");
+formu.setAttribute('id', 'form-signIn');// creamos el formulario
 //formu.action = "#/Home";
 //formu.method = "POST";
 const control = document.createElement["input"];// creamos un control
@@ -33,6 +44,10 @@ formu.appendChild(inputEmail);
 formu.appendChild(inputPassword);
 formu.appendChild(btn);
 document.body.appendChild(formu);
+ 
+
+  
+
 return formu; //añadimos el formulario...
  /*
 

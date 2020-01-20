@@ -1,84 +1,16 @@
-// singIn
-/*
-export  function signInEmail(email, password ){ 
-    firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-        console.log('ya entre');
-    });
-    
-    
-    if (email.length < 4) {
-    alert('Please enter an email address.');
-    return;
-}
-if (password.length < 4) {
-    alert('Please enter a password.');
-    return;
 
-
-}
-.catch(function (error) {
-    let errorCode = error.code;
-    let errorMessage = error.message;
-    if (errorCode === 'auth/wrong-password') {
-        alert('Wrong password.');
-
-    } else if (errorCode !== 'auth/wrong-password') {
-        first_page.classList.add("hide");
-        spa.classList.remove('hide');
-
-    } else {
-        alert(errorMessage);
-    }
-    document.getElementById('btn_sing_in').disabled = false;
-});
-document.getElementById('btn_sing_in').disabled = true;
-
-}
-
-export function hey(){
-    alert("aqyi");
-}
-
-//LogOut
-
-export function logOutFun(){
-    firebase.auth().signOut().then(function () {
-      // Sign-out successful.
-    }).catch(function (error) {
-      // An error happened.
-    });
-}
-
-
- export class Autenticacion {
-/*Crear cuenta
-    crearCuentaEmailPass(email, password){
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(result => {
-            result.user.updateProfile({
-                displayName: email
-            })
-        })
-        .catch(error =>{
-            console.error(error)
-            alert("error")
-        })
-    },
-
-//autenticacion
-autEmailPass(email, password){
+ function autEmailPass(email, password){
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(result => {
-       console.log('Autenticado');
+      console.log('ya entre');
+      console.log(window.location.hostname);
+      console.log(window.location.pathname);
+      let nE= window.history.length;
+      console.log(nE);
+      //window.history.go(50);
+     history.pushState("home.js", "home","#/Home");
+     window.history.go();
     })
 }
 
-
-}*/
-
-export function autEmailPass(email, password){
-    firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(result => {
-       console.log('Autenticado');
-    })
-}
+export {autEmailPass}
