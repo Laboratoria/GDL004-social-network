@@ -1,6 +1,6 @@
 
-let email = document.getElementById("email_answer").Value
-let password = document.getElementById("paswword_answer")
+//let email = document.getElementById("email_answer").Value
+//let password = document.getElementById("paswword_answer")
 
 
 

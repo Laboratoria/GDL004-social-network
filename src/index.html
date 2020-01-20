@@ -140,67 +140,65 @@
 
   <script type="module" src="./main.js"></script>
  </html>
+develop
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./561153-web-essentials/font/flaticon.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <title>social-network</title>
+</head>
+
+<body>
+  
+    <main class="main_container">
+        <button id="btn_test" >hey soy el boton</button>
+       
+              <button > <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span> 
+              </button>
+              <button > <span class="flaticon-051-user"><a href="#/EditProfile"> User</a> </span> 
+              </button>
+              <button> <a href="#/Home"> Home</a> </button>
+              <button id=log-out><a href=""> Salir</a> </button> 
+            
+      <section id="container">  
+       
+      </section>
+    </main>
+    
 </body>
+<script type="module" src="./main.js"></script>
 <script type="module" src="./index.js"></script>
 
- <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+</html>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB6jtWov3iCLYOcaTFHErANCRdCcAR5Hcc",
+    authDomain: "emprenderizate-86314.firebaseapp.com",
+    databaseURL: "https://emprenderizate-86314.firebaseio.com",
+    projectId: "emprenderizate-86314",
+    storageBucket: "emprenderizate-86314.appspot.com",
+    messagingSenderId: "581493268608",
+    appId: "1:581493268608:web:8f0e920a59b05d8d3b4665",
+    measurementId: "G-5S6ZBV4F8V"
+  };
+  // Initialize Firebase
+  var proyect = firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+ 
+</script>
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyB6jtWov3iCLYOcaTFHErANCRdCcAR5Hcc",
-            authDomain: "emprenderizate-86314.firebaseapp.com",
-            databaseURL: "https://emprenderizate-86314.firebaseio.com",
-            projectId: "emprenderizate-86314",
-            storageBucket: "emprenderizate-86314.appspot.com",
-            messagingSenderId: "581493268608",
-            appId: "1:581493268608:web:8f0e920a59b05d8d3b4665",
-            measurementId: "G-5S6ZBV4F8V"
-        };
-        // Initialize Firebase
-        var proyect = firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-/*
- let spa = document.getElementById('spa');
- let first_page= document.getElementById("first_page");
-      function enviar(){
-          let email = document.getElementById("email_answer").value;
-          let password = document.getElementById("paswword_answer").value;
-
-          alert('hey  ')
-          console.log(email);
-          firebase.auth().createUserWithEmailAndPassword(email, password)
-          .catch(function(error) {
-
-            var errorCode = error.code;
-            var errorMessage = error.message;
-
-          });
-        }
-        function enviar(){
-            let email = document.getElementById("email_answer").value;
-            let password = document.getElementById("paswword_answer").value;
-
-
-            console.log(email);
-            firebase.auth().signInWithEmailAndPassword(email, password)
-            .catch(function(error) {
-
-              var errorCode = error.code;
-              var errorMessage = error.message;
-
-            });
-            first_page.classList.add("hide");
-            spa.classList.remove('hide');
-
-          }
-          */
-    </script>
 </html>

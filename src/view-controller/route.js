@@ -3,7 +3,8 @@ const changeView = (route) => {
     const container = document.getElementById('container')
         container.innerHTML ="";
     switch (route ) {
-        
+        case "": 
+             { return container.appendChild( components.login())}
         case "#/Home":
              { return container.appendChild( components.home())}
         case "#/Profile": { return container.appendChild( components.profile())}
