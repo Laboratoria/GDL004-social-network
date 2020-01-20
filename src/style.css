@@ -141,6 +141,12 @@ li {
 
 }
 
+
 .profile_description {
 
+}
+
+}
+.hide{
+    display: none !important;
 }

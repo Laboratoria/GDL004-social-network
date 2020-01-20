@@ -7,10 +7,21 @@ const password = document.getElementById('password_answer');
 
 
 
-export const hey =(e)=>{
-  e.preventDefault;
-  alert("email, password");
-  
+const login =()=>{
+  if (email.value !='' && password.value !=''){
+    signInEmail(email.value, password.value);
+  }
+}
+//document.querySelector('#btn_sing_in').addEventListener("click", login);
+//document.querySelector('#btn_sing_in').addEventListener("click", hey);
+//singIn.addEventListener("click", hey);
+hey_btn.addEventListener("click", hey);
+/*
+//Crear cuenta
+
+function newAccount() {
+  firebase.auth().createUserWithEmailAndPassword(emailNew, passwordNew)
+    .catch(function (error) {
 
 }
  */
