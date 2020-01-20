@@ -3,13 +3,12 @@ const init = () => {
   window.addEventListener("hashchange", () => console.log(window.location.hash))
 }
 window.addEventListener('load', init)
-import { signInEmail, hey } from './models/auth.js';
 
 //variables globales
 let spa = document.querySelector('#spa');
 let first_page = document.querySelector("#first_page");
-export let email= document.querySelector("#email_answer");
-export let password = document.querySelector("#paswword_answer");
+let email= document.querySelector("#email_answer");
+let password = document.querySelector("#paswword_answer");
 //let email_new = document.querySelector("#new_email").value;
 //slet password_new = document.querySelector("#new_password").value;
 let singIn = document.querySelector("#btn_sing_in");
@@ -19,16 +18,38 @@ let singInFB = document.querySelector("#btn_sing_in_fb");
 
 // Sign In
 
+import {autEmailPass} from './models/auth.js';
+export const login =()=>{
+ // signInEmail(email.value, password.value);  
+const email = document.querySelector("#email_answer").value;
+const password = document.querySelector("#password_answer").value;
 
-const login =()=>{
-  if (email.value !='' && password.value !=''){
-    signInEmail(email.value, password.value);
-  }
+autEmailPass(email, password);
+console.log('ya entre');
+debugger
+//console.log("hey");
 }
-//document.querySelector('#btn_sing_in').addEventListener("click", login);
+
+/*
+
+export const login =()=>{
+  
+   // signInEmail(email.value, password.value);  
+ console.log("hey");
+ const email = document.querySelector("#email_answer").value;
+ const password = document.querySelector("#password_answer").value;
+ console.log(email,password);
+ const auth = new Autenticacion()
+ auth.crearCuentaconEmailPass(email, password);
+ console.log("hey");
+}
+
+
+
 //document.querySelector('#btn_sing_in').addEventListener("click", hey);
 //singIn.addEventListener("click", hey);
-hey_btn.addEventListener("click", hey);
+//hey_btn.addEventListener("click", hey);
+//alert(signIn)
 /*
 //Crear cuenta
 function newAccount() {

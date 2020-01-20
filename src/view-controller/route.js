@@ -1,9 +1,13 @@
 import { components } from '../view/index.js';
+import  login  from '../view/login.js';
 const changeView = (route) => {
     const container = document.getElementById('container')
         container.innerHTML ="";
+    const formCreate = document.getElementById('form-sign');
+    //formCreate.innerHTML ='';
+    login();
     switch (route ) {
-        case "": 
+        case "#/": 
              { return container.appendChild( components.login())}
         case "#/Home":
              { return container.appendChild( components.home())}
@@ -14,7 +18,8 @@ const changeView = (route) => {
         default:
             break;
     }
-    console.log(route)
+    
+    return null;
 }
 
 export {changeView}

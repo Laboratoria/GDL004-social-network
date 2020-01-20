@@ -1,6 +1,5 @@
 // singIn
-
-
+/*
 export  function signInEmail(email, password ){ 
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
         console.log('ya entre');
@@ -17,10 +16,6 @@ if (password.length < 4) {
 
 
 }
-
-
-  
-/*
 .catch(function (error) {
     let errorCode = error.code;
     let errorMessage = error.message;
@@ -37,7 +32,7 @@ if (password.length < 4) {
     document.getElementById('btn_sing_in').disabled = false;
 });
 document.getElementById('btn_sing_in').disabled = true;
-*/
+
 }
 
 export function hey(){
@@ -52,4 +47,38 @@ export function logOutFun(){
     }).catch(function (error) {
       // An error happened.
     });
+}
+
+
+ export class Autenticacion {
+/*Crear cuenta
+    crearCuentaEmailPass(email, password){
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(result => {
+            result.user.updateProfile({
+                displayName: email
+            })
+        })
+        .catch(error =>{
+            console.error(error)
+            alert("error")
+        })
+    },
+
+//autenticacion
+autEmailPass(email, password){
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(result => {
+       console.log('Autenticado');
+    })
+}
+
+
+}*/
+
+export function autEmailPass(email, password){
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(result => {
+       console.log('Autenticado');
+    })
 }

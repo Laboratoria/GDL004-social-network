@@ -1,8 +1,10 @@
-import { hey } from "../models/auth.js";
+import { login } from "../index.js";
+
 export default () => {
-    const inputEmail = document.createElement("INPUT");
+const inputEmail = document.createElement("INPUT");
 inputEmail.innerHTML = "email";
 inputEmail.setAttribute("placeholder", "email");
+//inputEmail.setAttribute("value", '');
 inputEmail.setAttribute("id", "email_answer");
 document.body.appendChild(inputEmail);
 
@@ -12,21 +14,33 @@ inputPassword.setAttribute("placeholder", "password");
 inputPassword.setAttribute("id", "password_answer");
 document.body.appendChild(inputPassword);
 
-const btn = document.createElement("BUTTON");   // Create a <button> element
-btn.innerHTML = "Log In";                   // Insert text
+const btn = document.createElement("BUTTON");   
+btn.innerHTML = "Log In";                   
+btn.onclick = login;
 btn.setAttribute('id', 'btn_sing_in');
-//btn.setAttribute("onclick", "hey()")
 document.body.appendChild(btn);   
-    const viewLogin = `
-    
-    
-     `;
+//btn.setAttribute("onclick", "hey()")
 
+const formu = document.createElement("form");
+formu.setAttribute('id', 'form-sign');// creamos el formulario
+//formu.action = "#/Home";
+//formu.method = "POST";
+const control = document.createElement["input"];// creamos un control
+//control.setAttribute("type", "text");
+//control.setAttribute("name", "email_");
+// lo añadimos al form
+formu.appendChild(inputEmail);
+formu.appendChild(inputPassword);
+formu.appendChild(btn);
+document.body.appendChild(formu);
+return formu; //añadimos el formulario...
+ /*
 
-    const divElemt = document.createElement('div');
-    divElemt.innerHTML = viewLogin;
-    return divElemt;
-
+const viewLogin = `  `;
+const divElemt = document.createElement('div');
+divElemt.innerHTML = viewLogin;
+return divElemt;
+*/
    
 };
 
