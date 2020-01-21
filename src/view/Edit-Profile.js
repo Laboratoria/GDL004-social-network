@@ -1,8 +1,9 @@
 export default () => {
     const viewEditProfile = `<h2> ¡Soy el Edit-Profile </h2>
-    <figure> <img src="/" alt="Edit-profile"> </figure>`
+    <figure> <img src="/" alt="Edit-profile"> </figure>
+
     <div class='container'>
-       
+
         <figure> <img src="/" alt="home"> </figure>
         <div class='' id="spa">
         <header class="header_nav">
@@ -13,8 +14,8 @@ export default () => {
           </ul>
         </header>
         <main class="main_container">
-          <section id="container">  
-            
+          <section id="container">
+
           </section>
         </main>
         <nav class="navbar_bottom">
@@ -26,8 +27,8 @@ export default () => {
           </ul>
         </nav>
       </div>
-      
-        
+
+
     </div>`
 
     const divElem = document.createElement('div')
