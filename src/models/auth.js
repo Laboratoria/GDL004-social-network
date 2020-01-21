@@ -14,5 +14,3 @@ function autEmailPass(email, password){
 }
 
 export {autEmailPass}
-
-function autGoogle ()
