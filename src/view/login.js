@@ -50,6 +50,7 @@ document.body.appendChild(formu);
 
 return formu; //añadimos el formulario...
  /*
+ 
 const viewLogin = `  `;
 const divElemt = document.createElement('div');
 divElemt.innerHTML = viewLogin;
