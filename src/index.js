@@ -9,3 +9,12 @@ export const hey =(e)=>{
 
 }
  */
+//singIn.addEventListener("click", hey);
+hey_btn.addEventListener("click", hey);
+/*
+//Crear cuenta
+function newAccount() {
+  firebase.auth().createUserWithEmailAndPassword(emailNew, passwordNew)
+    .catch(function (error) {
+}
+ */

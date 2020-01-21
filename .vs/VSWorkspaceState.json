@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\models",
+    "\\src\\view",
     "\\src\\view-controller"
   ],
-  "SelectedNode": "\\src\\style.css",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
