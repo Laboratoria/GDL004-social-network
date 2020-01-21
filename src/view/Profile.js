@@ -20,6 +20,9 @@ export default () => {
             </div>
              
         </div>   
+        <li> <button id=log-out type="submit"> <a href="">SALIRRRRR </button> </li>
+           
+           
     </div>`
 
     const divElem = document.createElement('div')
