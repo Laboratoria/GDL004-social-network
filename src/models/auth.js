@@ -13,4 +13,15 @@ function autEmailPass(email, password){
     })
 }
 
-export {autEmailPass}
+function createUser(suemail, supassword){
+  firebase.auth().createUserWithEmailAndPassword(suemail, supassword).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log("yalo creeaste")
+    history.pushState("home.js", "home","#/Home");
+     window.history.go();
+    // ...
+  });
+}
+export {autEmailPass,createUser}
