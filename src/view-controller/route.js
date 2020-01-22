@@ -1,5 +1,5 @@
 import { components } from '../view/index.js';
-
+import  login  from '../view/login.js';
 const changeView = (route) => {
     const container = document.getElementById('container')
         container.innerHTML ="";
@@ -21,7 +21,6 @@ const changeView = (route) => {
         default:
             { return container.appendChild( components.login())}
     }
-
     return null;
 }
 

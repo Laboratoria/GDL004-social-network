@@ -19,8 +19,10 @@ export default () => {
             <div class="profile_direction">  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
 
+
         </div>
         <li> <button id=log-out type="submit"> <a href="">SALIRRRRR </button> </li>
+
 
 
     </div>`

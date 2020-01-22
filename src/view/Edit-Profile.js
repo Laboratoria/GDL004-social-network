@@ -28,7 +28,6 @@ export default () => {
         </nav>
       </div>
 
-
     </div>`
 
     const divElem = document.createElement('div')

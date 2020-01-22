@@ -8,7 +8,7 @@ export default () => {
           <ul class="header_nav_list">
             <li class="header_nav-page"> <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span> </span>
             </li>
-            <li class="header_nav-user"> <span class="flaticon-051-user"><a href="#/EditProfile"> Perro</a> </span> </li>
+            <li class="header_nav-user"> <span class="flaticon-051-user"><a href="#/EditProfile"> User</a> </span> </li>
           </ul>
         </header>
         <main class="main_container">

@@ -1,4 +1,5 @@
 /*import {autEmailPass} from './models/auth.js';
+
 const formulario= document.getElementById('form-signIn');
 const btnLogIn = document.getElementById('btn_sing_in');
 const email = document.getElementById('email_answer');
@@ -14,9 +15,11 @@ const login =()=>{
 hey_btn.addEventListener("click", hey);
 /*
 //Crear cuenta
+
+
 function newAccount() {
   firebase.auth().createUserWithEmailAndPassword(emailNew, passwordNew)
     .catch(function (error) {
+
 }
  */
- 
