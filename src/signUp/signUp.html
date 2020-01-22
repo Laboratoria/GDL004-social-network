@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="signUp.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Social Network</title>
+</head>
+<body>
+  <div class="container">
+      <div class="email">
+        <i class="material-icons">mail_outline</i>
+        <input id="email" type="email" class="emailInput" placeholder=": Select an e-mail"/><br>
+      </div>
+      <div class="password">
+        <i class="material-icons">vpn_key</i>
+        <input id="password" type="password" class="passwordInput"placeholder=": Enter your new password"/>
+     </div>
+      <nav>
+        <button class="signUpFirebase"><i class="material-icons">fingerprint</i><br>Sign Up</button>
+        <p>or<br></p>
+        <div>
+          <img id="facebook"class="signUp" src="https://bit.ly/2TwBnyb">
+          <img id="twitter"class="signUp" src="https://bit.ly/2TpDi7U">
+          <img id="google"class="signUp" src="https://bit.ly/360GhpX">
+          <img id="github"class="signUp" src="https://bit.ly/3afbo4r">
+        </div>
+      </nav>
+      <footer>
+      <button class="back"><i class="material-icons">first_page</i></button>
+    </footer>
+  </div>
+</body>
+
+<!-- aqui empiezan a ir los links de Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+<script src="../Firebase/firebase.js"></script>
+<script type="module" src="signUp.js"></script>
+</html>
