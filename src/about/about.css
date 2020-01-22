@@ -1,0 +1,40 @@
+/* This applies from 0px to 600px */
+body {
+  background: black;
+  color: plum;
+}
+/* This applies from 600px onward */
+/* An example for using MQuerys*/
+@media (min-width: 600px) {
+  body {
+    background: #333333;
+  }
+}
+section {
+  grid-area: about;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  color: #d2d2d2;
+  padding-top: 15vh;
+}
+button {
+  grid-area: back;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  align-self: flex-start;
+  color: #d2d2d2;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    '. about .'
+    '. . .'
+    '. back .';
+}
