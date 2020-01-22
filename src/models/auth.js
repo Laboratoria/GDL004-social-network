@@ -3,6 +3,7 @@ function autEmailPass(email, password){
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(result => {
       console.log('ya entre');
+      console.log(firebase.auth().currentUser)
       console.log(window.location.hostname);
       console.log(window.location.pathname);
       let nE= window.history.length;

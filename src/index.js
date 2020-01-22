@@ -1,4 +1,4 @@
-/* import {autEmailPass} from './models/auth.js';
+/*import {autEmailPass} from './models/auth.js';
 const formulario= document.getElementById('form-signIn');
 const btnLogIn = document.getElementById('btn_sing_in');
 const email = document.getElementById('email_answer');
@@ -19,3 +19,4 @@ function newAccount() {
     .catch(function (error) {
 }
  */
+ 
