@@ -1,3 +1,5 @@
+import {navbar} from './commonElements.js';
+import {headerMenu} from './commonElements.js';
 export default () => {
     const viewProfile = `
     
@@ -27,8 +29,16 @@ export default () => {
      
 </div>`;
 
-    const divElemt = document.createElement('div');
-    
+const divElem = document.createElement('div');
+divElem.setAttribute("class", "view_component");
+// container.body.appendChild(divElem);
+divElem.innerHTML ="Soy el Profile"
+document.innerHTML = headerMenu();
+
+document.innerHTML = navbar();
+
+
+return divElem;
     divElemt.innerHTML = viewProfile;
     return divElemt;
 };
