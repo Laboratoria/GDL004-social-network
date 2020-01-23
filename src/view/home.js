@@ -35,6 +35,11 @@ export default () => {
     return divElem;
 }
 
+
+
+
+
+
 var user;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
