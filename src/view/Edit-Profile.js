@@ -1,4 +1,9 @@
+import {navbar} from './commonElements.js';
+import {headerMenu} from './commonElements.js';
+
+
 export default () => {
+<<<<<<< HEAD
     const viewEditProfile = `<h2> ¡Soy el Edit-Profile </h2>
     <figure> <img src="/" alt="Edit-profile"> </figure>
 
@@ -29,9 +34,26 @@ export default () => {
       </div>
 
     </div>`
+=======
+    const divElem = document.createElement('div');
+    divElem.setAttribute("class", "view_component");
+   // container.body.appendChild(divElem);
+   divElem.innerHTML ="Soy el User"
+   document.innerHTML = headerMenu();
+    
+    document.innerHTML = navbar();
+  
+    
+    return divElem;
+     
+    
+}
 
-    const divElem = document.createElement('div')
-    divElem.innerHTML = viewEditProfile;
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
 
+
+<<<<<<< HEAD
     return divElem;
 }
+=======
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3

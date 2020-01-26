@@ -7,16 +7,28 @@ const changeView = (route) => {
    // formCreate.innerHTML ='';
    // login()
     switch (route ) {
+<<<<<<< HEAD
         case "#/FormCount":
             container.appendChild(components.formCount())
             break;
+=======
+       
+        case "#/FormCount":
+            container.appendChild(components.formCount())
+            break;    
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
         case "#/Home":
-              container.appendChild( components.home())
+              container.appendChild(components.home())
         break;
         case "#/Profile": container.appendChild( components.profile())
         break;
         case "#/EditProfile": container.appendChild( components.editProfile())
         break;
+<<<<<<< HEAD
+=======
+
+        
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
         default:
             { return container.appendChild( components.login())}
     }

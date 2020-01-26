@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default () => {
     const viewHome = `
     <div class='container'>
@@ -28,10 +29,23 @@ export default () => {
 
 
     </div>`
+=======
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
 
-    const divElem = document.createElement('div')
-    divElem.innerHTML = viewHome;
+import {navbar} from './commonElements.js';
+import {headerMenu} from './commonElements.js';
 
+export default () => {
+  
+  const divElem = document.createElement('div');
+  divElem.setAttribute("class", "view_component");
+ // container.body.appendChild(divElem);
+ divElem.innerHTML ="Soy el HOME"
+ document.innerHTML = headerMenu();
+  
+  document.innerHTML = navbar();
+
+<<<<<<< HEAD
     return divElem;
 }
 
@@ -82,3 +96,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   var name = (snapshot.val() && snapshot.val().name) || 'Anonymous';
   console.log(name)
 });*/
+=======
+  
+  return divElem;
+   
+};
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3

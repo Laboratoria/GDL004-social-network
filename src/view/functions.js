@@ -23,4 +23,8 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3

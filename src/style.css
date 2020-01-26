@@ -4,12 +4,21 @@
 }
 body {
     background-color: rgba(19, 35, 47, 0.9);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
 }
 .header_nav {
+    width: 100%;
     font-family: 'Ubuntu', sans-serif;
-    height: 5vh;
+    height: 8vh;
     padding: 10px;
+<<<<<<< HEAD
     background-color: #179B77;
+=======
+    background-color: #179b77;
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -26,6 +35,7 @@ body {
     display: flex;
     justify-content: flex-start;
     padding-left: 10px;
+    margin-top: 8px;
 }
 .header_nav-page a {
     margin-top: 12px;
@@ -33,7 +43,8 @@ body {
 .header_nav-user {
     display: flex;
     justify-content: flex-end;
-    padding-right: 10px;
+    padding-right: 25px;
+    margin-top: 10px;
 }
 li {
     list-style-type: none;
@@ -45,13 +56,19 @@ li {
 } */
 .navbar_bottom {
     width: 100%;
+<<<<<<< HEAD
     height: 9vh;
     background-color: #179B77;
+=======
+    height: 8vh;
+    background-color: #179b77;
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     color: white;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     padding: 10px;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 20px;
 }
 .navbar_bottom_list {
     display: grid;
@@ -61,6 +78,7 @@ li {
     font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
     color: white;
+    padding: 15px;
 }
 .hide {
     display: none;
@@ -70,6 +88,11 @@ li {
     body {
         background-color:   rgba(19, 35, 47, 1);
     }
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
 }
 .modal_ing_in {
 }
@@ -108,10 +131,22 @@ li {
     grid-template-rows: 5(1fr);
 }
 .profile_description {
+<<<<<<< HEAD
 }
 .hide{
     display: none !important;
 }
+=======
+
+}
+
+
+.hide{
+    display: none !important;
+}
+
+
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
 /*Sing Up & Log In*/
 h1{
     display: flex;
@@ -130,11 +165,16 @@ h1{
    border-radius: 4px;
   /* box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
 .login_container{
     width: 80%;
    flex-direction: column;
    margin: 0%;
 }
+<<<<<<< HEAD
 .btn_container{
     display: flex;
     justify-content: space-around;
@@ -149,12 +189,35 @@ h1{
     background: #179B77;
     border: none;
     color: #FFFFFF;
+=======
+
+.btn_container{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;    
+    padding: 0px;
+   /* background: rgba(160, 179, 176, 0.25);*/
+    width: 100%;
+   
+    
+}
+
+  
+  .btn_primary{
+    
+    cursor: pointer;
+    /*background: rgba(160, 179, 176, 0.25);*/
+    background: #179b77;
+    border: none;
+    color: #ffffff;
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     width: 40%;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
     transition: 0.5s ease;
     padding: 5%;
+<<<<<<< HEAD
 }
   .btn_primary:hover {
     background: #179B77;
@@ -165,20 +228,47 @@ h1{
     color: #FFFFFF;
   }
   .inputs{
+=======
+    
+    
+}
+  .btn_primary:hover {
+    background: #179b77;
+    color: #ffffff;
+  }
+  .btn_primary .active  {
+    background: #1ab188;
+    color: #ffffff;
+  }
+
+  .inputs{
+    
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     font-size: 22px;
     display: block;
     width: 95%;
     padding: 5px 5px;
     background: transparent;
+<<<<<<< HEAD
     border: 1px solid #A0B3B0;
     color: #FFFFFF;
+=======
+    border: 1px solid #a0b3b0;
+    color: #ffffff;
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     border-radius: 0;
     margin-top: 5%;
   }
   .inputs:focus {
   outline: 0;
+<<<<<<< HEAD
   border-color: #1AB188;
 }
+=======
+  border-color: #1ab188;
+}
+
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
   .btn {
     border: 0;
     width: 100%;
@@ -188,6 +278,7 @@ h1{
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+<<<<<<< HEAD
     background: #1AB188;
     color: #FFFFFF;
     transition: all 0.5s ease;
@@ -196,3 +287,73 @@ h1{
   .btn:hover, .btn:focus {
     background: #179B77;
   }
+=======
+    background: #1ab188;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    margin-top: 5%;
+    
+  }
+  .btn:hover, .btn:focus {
+    background: #179b77;
+  }
+  .view_component{
+      height: 80vh;
+      background-color: transparent;
+      padding: 50px;
+      margin-top: 16%;
+
+  }
+  .top{
+      position: absolute;
+      top:0;
+      
+  }
+  .bottom{
+      position: absolute;
+      bottom: 0;
+  }
+  .view_component{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 30px;
+  }
+   /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3

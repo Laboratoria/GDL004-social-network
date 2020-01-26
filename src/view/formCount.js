@@ -1,10 +1,18 @@
 import { createUser } from '../models/auth.js';
 import {btnSingInUp} from './commonElements.js';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
 const singup = () => {
    // const suname = document.getElementById('su_name').value
     //const sulastname = document.getElementById('su_lastname').value
     const suemail = document.getElementById('su_email').value;
+<<<<<<< HEAD
     const supassword = document.getElementById('su_password').value;
+=======
+    const supassword = document.getElementById('su_password').value; 
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
       if (suemail != "" || supassword != "") {
         //console.log(sumail + supassword)
         createUser(suemail, supassword)    }
@@ -31,7 +39,10 @@ export default () => {
     const inputsu_email = document.createElement("input");
     inputsu_email.innerHTML = "su_email";
     inputsu_email.setAttribute("placeholder", "Email address")
+<<<<<<< HEAD
     inputsu_email.setAttribute("type", "email");
+=======
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     inputsu_email.setAttribute("id", "su_email");
     inputsu_email.setAttribute("class", "inputs");
     document.body.appendChild(inputsu_email);
@@ -39,7 +50,10 @@ export default () => {
     const inputsu_password = document.createElement("input");
     inputsu_password.innerHTML = "su_password";
     inputsu_password.setAttribute("placeholder", "Password")
+<<<<<<< HEAD
     inputsu_password.setAttribute("type", "password");
+=======
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     inputsu_password.setAttribute("id", "su_password");
     inputsu_password.setAttribute("class", "inputs");
     document.body.appendChild(inputsu_password);
@@ -50,6 +64,10 @@ export default () => {
     btn.setAttribute('id', 'btn_sing_up');
     btn.setAttribute('class', 'btn')
     document.body.appendChild(btn);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
     //div que lo contiene
     const divsingup = document.createElement("div");
     divsingup.setAttribute('id', 'divsingup');
@@ -66,4 +84,8 @@ export default () => {
     container.setAttribute("class", "container_grid_login");
     btnSingInUp();
     return container;
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
