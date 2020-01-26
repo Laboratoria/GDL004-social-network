@@ -1,59 +1,72 @@
-<<<<<<< HEAD
-export default () => {
-    const viewHome = `
-    <div class='container'>
-        <h2> ¡Soy el home </h2>
-        <figure> <img src="/" alt="home"> </figure>
-        <div class='' id="spa">
-        <header class="header_nav">
-          <ul class="header_nav_list">
-            <li class="header_nav-page"> <a href="#/Profile"> Profile </a><span class="flaticon-009-next "></span> </span>
-            </li>
-            <li class="header_nav-user"> <span class="flaticon-051-user"><a href="#/EditProfile"> User</a> </span> </li>
-          </ul>
-        </header>
-        <main class="main_container">
-          <section id="container">
-
-          </section>
-        </main>
-        <nav class="navbar_bottom">
-          <ul class="navbar_bottom_list">
-            <li> <span class="flaticon-012-house"> <a href="#/Home"> Home</a> </span></li>
-            <li> <span class="flaticon-036-zoom"> Search</span> </li>
-            <li> <span class="flaticon-045-add"> Post</span> </li>
-            <li> <button id=log-out type="submit"> <a href="">SALIRRRRR </button> </li>
-          </ul>
-        </nav>
-      </div>
-
-
-    </div>`
-=======
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-
 import {navbar} from './commonElements.js';
 import {headerMenu} from './commonElements.js';
 
 export default () => {
-  
+
   const divElem = document.createElement('div');
+  divElem.setAttribute("id", "postList");
   divElem.setAttribute("class", "view_component");
  // container.body.appendChild(divElem);
  divElem.innerHTML ="Soy el HOME"
  document.innerHTML = headerMenu();
-  
+
   document.innerHTML = navbar();
 
-<<<<<<< HEAD
-    return divElem;
+
+  return divElem;
+
+};
+
+
+//leer render post;
+
+function renderPost(doc){
+  const postList = document.querySelector('#postList');
+  let li = document.createElement("li");
+  let title = document.createElement("span");
+  let postMade= document.createElement("span");
+
+  li.setAttribute("data-id", doc.id);
+  title.textContent = doc.data().title;
+  postMade.textContent = doc.data().post_area;
+
+  li.appendChild(title);
+  li.appendChild(postMade);
+
+  postList.appendChild(li);
+
+
 }
 
+const postVar =db.collection('Post').get().then((snapshot) =>{
+  snapshot.docs.forEach(doc => {
+    renderPost(doc);
+  })
+})
+//saving data
+
+const form = document.querySelector("#form_post");
+const btnForm = document.querySelector('#postBtn_enter');
+
+form.addEventListener('click', (e) =>{
+
+  db.collection('Post').add({
+    title: form.title.value,
+    post_area:form.post_area.value
+  })
+  .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+
+});
 
 
+console.log(postVar);
 
-
-
+//user y realtime database
 var user;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -96,9 +109,3 @@ firebase.auth().onAuthStateChanged(function(user) {
   var name = (snapshot.val() && snapshot.val().name) || 'Anonymous';
   console.log(name)
 });*/
-=======
-  
-  return divElem;
-   
-};
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3

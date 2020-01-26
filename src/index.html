@@ -13,40 +13,46 @@
 
   <body>
 
-
       <main class="main_container">
         <section id="container"></section>
       </main>
 
-      <!-- Trigger/Open The Modal -->
-      <button id="myBtn">Open Modal</button>
+      <!-- Trigger/Open The Modal
+      <button id="postBtn">Open Modal</button> -->
 
       <!-- The Modal -->
-      <div id="myModal" class="modal">
-
+      <div id="postModal" class="modal">
 
         <!-- Modal content -->
+        <form action="" id="form_post">
         <div class="modal-content">
           <span class="close">&times;</span>
           <p>Soy el Post </p>
-
+          <input type="text" id="title_post" name= "title" class="inputs" placeholder="Title" value=""></input>
+          <textarea type="text" id="textArea_post" name= "post_area" class="inputs" placeholder="Write your post" value=""></textarea>
+          <button id="postBtn_enter" class="btn" type="submit" onclick=closeModal()>Add Post</button>
+        </form>
 </div>
 
 
   <script type="module" src="./main.js"></script>
   <script type="module" src="./index.js"></script>
 
+
+
 </body>
+
 
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -60,9 +66,11 @@
     measurementId: "G-5S6ZBV4F8V"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  var database = firebase.database();
+  var proyect = firebase.initializeApp(firebaseConfig);
+
+
+  // Initialize Cloud Firestore through Firebase
+ const db = firebase.firestore();
 
 </script>
 

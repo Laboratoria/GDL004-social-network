@@ -1,154 +1,67 @@
-<<<<<<< HEAD
-import  {autEmailPass} from '../models/auth.js';
-import {btnSingInUp} from './commonElements.js';
-=======
-import  {autEmailPass, sing_socialNewtwork} from '../models/auth.js';
+import {navbar} from './commonElements.js';
+import {headerMenu} from './commonElements.js';
 
-
-import {btnSingInUp} from './commonElements.js';
-
-
-
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-const login =()=>{
-    const email= document.getElementById('email_answer').value;
-    const password= document.getElementById('password_answer').value;
-    if (firebase.auth().currentUser) {
-<<<<<<< HEAD
-      firebase.auth().signOut();
-    } else {
-=======
-      
-      firebase.auth().signOut();
-      
-    } else {
-     
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-      if (email.length < 4) {
-        alert('Please enter an email address.');
-        return;
-      }
-      if (password.length < 4) {
-        alert('Please enter a password.');
-        return;
-      }
-     if (email !="" && password !=""){
-      autEmailPass(email, password)
-<<<<<<< HEAD
-    }
-  }
-}
-=======
-      
-    }
-  }
-  
-} 
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-const singGoogle = () => {
-  console.log("konda")
-  const provider = new firebase.auth.GoogleAuthProvider();
-  //provider = new firebase.auth.GoogleAuthProvider();
-  sing_socialNewtwork(provider)
-<<<<<<< HEAD
-=======
-  history.pushState("home.js", "home", "#/Home");
-  window.history.go();
-  
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-}
 export default () => {
-const welcomeName = document.createElement("h1");
-welcomeName.innerHTML ="WELCOME"
-const inputEmail = document.createElement("INPUT");
-inputEmail.innerHTML = "email";
-inputEmail.setAttribute("placeholder", "Email@gmail.com");
-inputEmail.setAttribute("type", "email");
-inputEmail.setAttribute("id", "email_answer");
-inputEmail.setAttribute("class", "inputs form__field ");
-document.body.appendChild(inputEmail);
-const inputPassword= document.createElement("INPUT");
-inputPassword.innerHTML = "password";
-inputPassword.setAttribute("placeholder", "******");
-inputPassword.setAttribute("id", "password_answer");
-inputPassword.setAttribute("type", "password");
-inputPassword.setAttribute("class", "inputs form__field ")
-document.body.appendChild(inputPassword);
-<<<<<<< HEAD
-const btn = document.createElement("BUTTON");
-btn.innerHTML = "Get Started";
-btn.onclick = login;
-btn.setAttribute('id', 'btn_sing_in');
-btn.setAttribute('class', 'btn')
-document.body.appendChild(btn);
-=======
 
-const btn = document.createElement("BUTTON");   
-btn.innerHTML = "Get Started";                   
-btn.onclick = login;
-btn.setAttribute('id', 'btn_sing_in');
-btn.setAttribute('class', 'btn')
-document.body.appendChild(btn);   
+  const divElem = document.createElement('div');
+  divElem.setAttribute("id", "postList");
+  divElem.setAttribute("class", "view_component");
+ // container.body.appendChild(divElem);
+ divElem.innerHTML ="Soy el HOME"
+ document.innerHTML = headerMenu();
 
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-  //div con boton entrar con google
-  const btngoogle = document.createElement("BUTTON")
-  btngoogle.innerHTML = "Sing in with GoogleChrome";
-  btngoogle.onclick = singGoogle;
-  btngoogle.setAttribute('id', 'btn_sing_in_google');
-  btngoogle.setAttribute('class', 'btn')
-  //btn entrar con google
-  const divbtns = document.createElement("div");
-  divbtns.setAttribute("class", "btn_sing_in");
-  divbtns.appendChild(btngoogle);
-<<<<<<< HEAD
-=======
+  document.innerHTML = navbar();
 
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-const container = document.createElement("section");
-container.setAttribute("class", "container_grid_login");
-const formu = document.createElement("div");
-formu.setAttribute('id', 'form-signIn');// creamos el formulario
-formu.setAttribute("class", "login_container form__group")
-<<<<<<< HEAD
-//formu.action = "#/Home";
-//formu.method = "POST";
-//control.setAttribute("type", "text");
-//control.setAttribute("name", "email_");
-// lo añadimos al form
-=======
 
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
-formu.appendChild(welcomeName);
-formu.appendChild(inputEmail);
-formu.appendChild(inputPassword);
-formu.appendChild(btn);
-<<<<<<< HEAD
-//document.body.appendChild(formu);
-formu.appendChild(divbtns)
-container.appendChild(formu);
-document.body.appendChild(container)
-btnSingInUp();
-return container; //añadimos el formulario...
- /*
-const viewLogin = `  `;
-const divElemt = document.createElement('div');
-divElemt.innerHTML = viewLogin;
-return divElemt;
-*/
-};
-=======
-
-formu.appendChild(divbtns)
-container.appendChild(formu);
-document.body.appendChild(container)
- 
-
-btnSingInUp();
-
-return container; //añadimos el formulario...
+  return divElem;
 
 };
 
 
->>>>>>> 352a892e25fafb9b49947f36ba08cc910e36a8b3
+//leer render post;
+
+function renderPost(doc){
+  const postList = document.querySelector('#postList');
+  let li = document.createElement("li");
+  let title = document.createElement("span");
+  let postMade= document.createElement("span");
+
+  li.setAttribute("data-id", doc.id);
+  title.textContent = doc.data().title;
+  postMade.textContent = doc.data().post_area;
+
+  li.appendChild(title);
+  li.appendChild(postMade);
+
+  postList.appendChild(li);
+
+
+}
+
+const postVar =db.collection('Post').get().then((snapshot) =>{
+  snapshot.docs.forEach(doc => {
+    renderPost(doc);
+  })
+})
+//saving data
+
+const form = document.querySelector("#form_post");
+const btnForm = document.querySelector('#postBtn_enter');
+
+form.addEventListener('click', (e) =>{
+
+  db.collection('Post').add({
+    title: form.title.value,
+    post_area:form.post_area.value
+  })
+  .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+
+});
+
+
+console.log(postVar);
