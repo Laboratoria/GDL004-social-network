@@ -67,7 +67,7 @@ form.addEventListener('click', (e) =>{
 console.log(postVar);
 
 //user y realtime database
-var user;
+/*var user;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
