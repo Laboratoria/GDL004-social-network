@@ -1,0 +1,124 @@
+/* mobile devices view */
+/* This applies from 0px to 600px (mobile) */
+
+
+/* desktop view */
+/* This applies from 600px onward for Desktop */
+@media (min-width: 600px) {
+    .welcomeView {
+        background-image: url('../assets/backgroundMin.jpg');
+        width:100%;
+        height:100vh;
+        display: grid;
+        grid-template-columns: 5% repeat(3, 1fr) 5%;
+        grid-template-rows: 8% repeat(4,1fr ) 5%;
+        grid-template-areas:
+        'nav nav nav nav nav'
+        '. . . . .'
+        '. header header aside .'
+        '. section . buttons .'
+        '. . . . .'
+        'footer footer footer footer footer';
+        }
+    nav {
+        grid-area: nav;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #1f1f29;
+        color: #CDABD9;
+        }
+    header{
+        color: #CDABD9;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        }
+    header > h1 {
+        color: blue;
+        font-size: 3.5em;
+        }
+    header > h2 {
+        align-self: center;
+        font-size: 3em
+        }
+    #spa{
+        padding-left: 5em;
+        }
+    #appName {
+        font-size: 35px;
+        font-family: 'Montserrat Subrayada', sans-serif;
+        }
+    header {
+        grid-area: header;
+        background-color:transparent;
+        }
+    section{
+        grid-area:section;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(31,31,41,0.7);
+        }
+    section > span {
+        font-size: 12px;
+        color: #a06e6e;
+        }
+    aside{
+        grid-area:aside;
+        background-color: rgba(26,31,63,0.7);
+        font-family: font-family: 'Julius Sans One', sans-serif;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+        }
+    aside > span {
+        color: rgba(205,171,217);
+        align-self: center;
+        padding-top: 3em;
+        }
+    #buttons{
+        display: flex;
+        justify-content: space-around;
+        grid-area:buttons;
+        background-color: rgba(26,31,63,0.7);
+        }
+    footer{
+        grid-area:footer;
+        background-color:#2B2B39;
+        font-size: 20px;
+        color:#CDABD9;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 3em;
+        align-items: center;
+        font-family: font-family: 'Julius Sans One', sans-serif;
+        }
+    #nameFooter{
+        font-size: 12px;
+        color: rgba(205,171,217, 0.8);
+        }
+    #mexicoflag{
+        width: 15px;
+        height: 10px;
+        padding-right: .5em;
+        }
+    button {
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #EFF3FB;
+        height: 50px;
+        }
+    button:hover {
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        background-color:#a06e6e;
+        color: #EFF3FB;
+        cursor: crosshair;
+        background-color: #a06e6e;
+        }
+    }
+    /* ************ end welcomeView's template ************ */
