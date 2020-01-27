@@ -16,7 +16,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       dbRef.set({
         name: displayName,
         userEmail: email,
-
         photoUser : photoURL
       });
       console.log("se supone que ya agregue el dato")
