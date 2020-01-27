@@ -63,5 +63,4 @@ form.addEventListener('click', (e) =>{
 
 });
 
-
 console.log(postVar);
