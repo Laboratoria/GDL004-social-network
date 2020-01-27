@@ -19,7 +19,7 @@
         '. section . buttons .'
         '. . . . .'
         'footer footer footer footer footer';
-        }
+    }
     nav {
         grid-area: nav;
         display:flex;
@@ -27,32 +27,32 @@
         align-items: center;
         background-color: #1f1f29;
         color: #CDABD9;
-        }
+    }
     header{
         color: #CDABD9;
         display: flex;
         flex-flow: column;
         align-items: flex-start;
-        }
+    }
     header > h1 {
         color: blue;
         font-size: 3.5em;
-        }
+    }
     header > h2 {
         align-self: center;
         font-size: 3em
-        }
+    }
     #spa{
         padding-left: 5em;
-        }
+    }
     #appName {
         font-size: 35px;
         font-family: 'Montserrat Subrayada', sans-serif;
-        }
+    }
     header {
         grid-area: header;
         background-color:transparent;
-        }
+    }
     section{
         grid-area:section;
         display: flex;
@@ -60,31 +60,36 @@
         color: white;
         font-family: 'Montserrat', sans-serif;
         background-color: rgba(31,31,41,0.7);
-        }
+    }
     section > span {
         font-size: 12px;
         color: #a06e6e;
-        }
+    }
     aside{
         grid-area:aside;
-        background-color: rgba(26,31,63,0.7);
         font-family: font-family: 'Julius Sans One', sans-serif;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-content: center;
-        }
+        background: rgba(0, 0, 0, 0);
+        color: #d2d2d2;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-color: #d2d2d2;
+    }
     aside > span {
         color: rgba(205,171,217);
         align-self: center;
         padding-top: 3em;
-        }
+    }
     #buttons{
         display: flex;
         justify-content: space-around;
         grid-area:buttons;
-        background-color: rgba(26,31,63,0.7);
-        }
+        background-color: transparent;
+    }
     footer{
         grid-area:footer;
         background-color:#2B2B39;
@@ -95,23 +100,23 @@
         padding-right: 3em;
         align-items: center;
         font-family: font-family: 'Julius Sans One', sans-serif;
-        }
+    }
     #nameFooter{
         font-size: 12px;
         color: rgba(205,171,217, 0.8);
-        }
+    }
     #mexicoflag{
         width: 15px;
         height: 10px;
         padding-right: .5em;
-        }
+    }
     button {
         font-size: 20px;
         border: none;
         border-radius: 10px;
         background-color: #EFF3FB;
         height: 50px;
-        }
+    }
     button:hover {
         -webkit-transition-duration: 0.5s;
         transition-duration: 0.5s;
@@ -119,6 +124,6 @@
         color: #EFF3FB;
         cursor: crosshair;
         background-color: #a06e6e;
-        }
     }
-    /* ************ end welcomeView's template ************ */
+}
+/* ************ end welcomeView's template ************ */
