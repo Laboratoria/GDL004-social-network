@@ -1,21 +1,17 @@
 function autEmailPass(email, password){
     firebase.auth().signInWithEmailAndPassword(email, password).then(result =>{
-      history.pushState("home.js", "home","#/Home");
+      history.pushState("home.js", "home", "#/Home");
      window.history.go();
     })
     .catch(function(error) {
-      // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // [START_EXCLUDE]
       if (errorCode === 'auth/wrong-password') {
-        alert('Wrong password.');
+        //alert('Wrong password.');
       } else {
         alert(errorMessage);
       }
-      console.log(error);
-
-      // [END_EXCLUDE]
+     // console.log(error);
     });
 }
 //crear cuenta con tu email y password

@@ -5,9 +5,7 @@ const singup = () => {
    // const suname = document.getElementById('su_name').value
     //const sulastname = document.getElementById('su_lastname').value
     const suemail = document.getElementById('su_email').value;
-
     const supassword = document.getElementById('su_password').value;
-
       if (suemail != "" || supassword != "") {
         //console.log(sumail + supassword)
         createUser(suemail, supassword)    }

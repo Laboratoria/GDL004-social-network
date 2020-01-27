@@ -10,6 +10,6 @@ const components = {
     home: Home,
     profile: Profile,
     editProfile: EditProfile,
-}
+} 
 
 export { components };
