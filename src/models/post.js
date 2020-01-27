@@ -19,7 +19,9 @@ firebase.auth().onAuthStateChanged(function(user) {
         photoUser : photoURL
       });
       console.log("se supone que ya agregue el dato")
-    };    writeUserData(displayName, email, photoURL);    console.log(uid)
+    };
+    writeUserData(displayName, email, photoURL);   
+     console.log(uid)
    //Referencia a la base de datos
     dbRef.once('value').then(function(snapshot) {         //Crea un snapshot
     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
