@@ -19,7 +19,7 @@ export default () => {
 
 
 //leer render post;
-var user;
+/*var user;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     function renderPost(doc){
@@ -68,5 +68,5 @@ firebase.auth().onAuthStateChanged(function(user) {
  else {
       console.log("No hay nadie signed in")
       }
-});
+});*/
 //console.log(postVar);
