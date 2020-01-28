@@ -69,4 +69,4 @@ firebase.auth().onAuthStateChanged(function(user) {
       console.log("No hay nadie signed in")
       }
 });
-console.log(postVar);
+//console.log(postVar);
