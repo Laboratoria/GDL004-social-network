@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     //###### Agrega el user a la collection  #################
     db.collection("users").add({
-      name: "Panchito",
+      name: "",
       userEmail: email,
       photoURL : photoURL
     })
