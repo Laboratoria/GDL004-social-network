@@ -1,15 +1,13 @@
 import auth from "./auth.js";
 import { btnSingInUp } from './commonElements.js';
-import { btngoogle } from './view./login.js';
-
-
 
 var user;
-
+function registrar(){
+  const email = document.getElementById('email_answer').value;
+  const password = document.getElementById('password_answer').value;
+}
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        const btngoogle = document.querySelector("btngoogle");
-        //const btnForm = document.querySelector('#postBtn_enter');
     // User is signed in.
     var displayName = user.displayName;
     var email = user.email;
@@ -26,7 +24,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         photoUser : photoURL
       });
           console.log("se supone que ya agregue el dato")
-          
+
     };
     writeUserData(displayName, email, photoURL);
      console.log(uid)

@@ -1,39 +1,10 @@
 function singUpForm () {
-
-  const btnSignIn = document.getElementById("btn_sing_in");
-  btnSignIn.classList.toggle("active");
-
-
-  history.pushState("formCount.js", "formCount", "#/FormCount");
-    window.history.go();
-    const btnSignUpForm = document.getElementById("btn_sing_up");
-    btnSignUpForm.classList.toggle("active");
+  history.pushState(null, null, "#/FormCount");
+    // window.history.go();
 }
 function logInForm () {
-  const btnSignUp = document.getElementById("btn_sing_up");
-  const btnSignIn = document.getElementById("btn_sing_in");
-  btnSignIn.classList.toggle("active");
-  btnSignUp.classList.toggle("active");
-
-  history.pushState("login.js", "login", "#/Login");
-    window.history.go();
-}
-
-function showModal(){
-  const modal = document.getElementById("postModal");
-  const btn = document.getElementById("postBtn");
-  const span = document.getElementsByClassName("close")[0];
-
-  modal.style.display = "block";
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+  history.pushState(null, null, "#/Login");
+    // window.history.go();
 }
 const btnSingInUp = () => {
 
@@ -50,8 +21,8 @@ const btnSingInUp = () => {
     btnSingUp.innerHTML = "Sing Up";
     btnSingUp.onclick = singUpForm;
    // btnSingUp.onclick = login;
-    btnSingUp.setAttribute('id', 'btn_sing_up');
-    btnSingUp.setAttribute('class', 'btn_primary ');
+    btnSingUp.setAttribute('id', 'btn_sing_in');
+    btnSingUp.setAttribute('class', 'btn_primary active');
     document.body.appendChild(btnSingUp);
 
     const containerBtn = document.createElement("div");
@@ -97,13 +68,9 @@ const navbar = () =>{
 
         const liNavPost = document.createElement("li");
         document.body.appendChild(liNavPost);
-
-            const liNavPostA = document.createElement("button");
-            liNavPostA.setAttribute("class", "btn_post");
-            liNavPostA.setAttribute("id", "postBtn");
+            const liNavPostA = document.createElement("a");
+            liNavPostA.setAttribute("href", "");
             liNavPostA.innerHTML = "Post";
-            liNavPostA.onclick = showModal;
-
             const liNavPostSpan = document.createElement("span");
             liNavPostSpan.setAttribute("class", "flaticon-045-add" )
             liNavPost.appendChild(liNavPostSpan);

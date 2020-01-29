@@ -1,42 +1,43 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="./561153-web-essentials/font/flaticon.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-    <title>social-network</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./561153-web-essentials/font/flaticon.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-  <body>
+  <title>social-network</title>
+</head>
 
-      <main class="main_container">
-        <section id="container"></section>
-      </main>
+<body>
 
-      <!-- Trigger/Open The Modal
-      <button id="postBtn">Open Modal</button> -->
+  <!--<span id="formError"></span> -->
+  <main class="main_container">
+    <section id="container"></section>
+  </main>
 
-      <!-- The Modal -->
-      <div id="postModal" class="modal">
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Open Modal</button>
 
-        <!-- Modal content -->
-        <form action="" id="form_post">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Soy el Post </p>
-          <input type="text" id="title_post" name= "title" class="inputs" placeholder="Title" value=""></input>
-          <textarea type="text" id="textArea_post" name= "post_area" class="inputs" placeholder="Write your post" value=""></textarea>
-          <button id="postBtn_enter" class="btn" type="submit" onclick=closeModal()>Add Post</button>
-        </form>
-</div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Soy el Post </p>
 
-  <script type="module" src="./main.js"></script>
-  <script type="module" src="./index.js"></script>
+    </div>
+    <!--<div id=menu >
+      <button onclick= "signOut()" id= "signOut"></button>
+    </div>
+  -->
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./index.js"></script>
 
 
 
@@ -47,11 +48,11 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+
 <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
-
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -66,10 +67,7 @@
   };
   // Initialize Firebase
   var proyect = firebase.initializeApp(firebaseConfig);
-
-  // Initialize Cloud Firestore through Firebase
- const db = firebase.firestore();
-
+  //firebase.analytics();
 </script>
 
 </html>
