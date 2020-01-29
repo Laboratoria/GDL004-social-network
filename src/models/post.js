@@ -1,11 +1,17 @@
 import auth from "./auth.js";
 import { btnSingInUp } from './commonElements.js';
+import { autEmailPass, sing_socialNewtwork} from '../models/auth.js';
 
-var user;
+
+
+
 function registrar(){
   const email = document.getElementById('email_answer').value;
   const password = document.getElementById('password_answer').value;
-}
+  const btn = document.createElement("BUTTON");
+  var user;
+  console.log(registrar);
+} 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
     // User is signed in.
@@ -16,6 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     var photoURL = user.photoURL;
     var uid = user.uid;
     var dbRef = firebase.database().ref('/users/' + uid);
+
 
       function writeUserData(displayName, email, photoURL) {
       dbRef.set({
