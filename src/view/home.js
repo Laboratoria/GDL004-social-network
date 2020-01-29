@@ -39,12 +39,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
     }
-
+  //este es el user snapshot
     const postVar =db.collection('Post').get().then((snapshot) =>{
       snapshot.docs.forEach(doc => {
         renderPost(doc);
       })
     })
+  //hasta aqui trmina el snapshot
     //saving data
 
     const form = document.querySelector("#form_post");

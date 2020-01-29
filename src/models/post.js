@@ -1,30 +1,10 @@
-import auth from "./auth.js";
+/*import auth from "./auth.js";
 import { btnSingInUp } from './commonElements.js';
 import { autEmailPass, sing_socialNewtwork} from '../models/auth.js';
 
+// Add a second document with a generated ID.
 
-
-
-function registrar(){
-  const email = document.getElementById('email_answer').value;
-  const password = document.getElementById('password_answer').value;
-  const btn = document.createElement("BUTTON");
-  var user;
-  console.log(registrar);
-} 
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    console.log(email);
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var uid = user.uid;
-    var dbRef = firebase.database().ref('/users/' + uid);
-
-
-      function writeUserData(displayName, email, photoURL) {
+    function writeUserData(displayName, email, photoURL) {
       dbRef.set({
         name: displayName,
         userEmail: email,
@@ -45,3 +25,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     // ...
   }
 });
+
+export {
+  autEmailPass,
+  createUser,
+  sing_socialNewtwork,
+  signOutU
+}*/

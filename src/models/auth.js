@@ -1,18 +1,34 @@
 //quien esta logeado
-
-  firebase.auth().onAuthStateChanged(function(user) {
-
+//##########  esto se ejecuta cuando el usuario se loguea o desloguea  #####
+firebase.auth().onAuthStateChanged(function(user) {
+  //########## cuando el usuario esta logueado se ejecuta  #######
   if (user) {
     // User is signed in.
-    var displayName = user.displayName;
+    var name = user.displayName;
     var email = user.email;
-    var emailVerified = user.emailVerified;
+    //var emailVerified = user.emailVerified
     var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
+    console.log()
     location.hash = "#/Home";
-    console.log("estas logeado" + email)
+    console.log("estas logeado " + email)
+
+    //###### Agrega el user a la collection  #################
+    db.collection("users").add({
+      name: "Panchito",
+      userEmail: email,
+      photoURL : photoURL
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+    //#####   Fin de agregar user a collection  ##############
+
+  //###### esto se ejecuta cuando el user no esta logueado ######
   } else if(!user){
     location.hash = "#/Login";
 
@@ -24,6 +40,7 @@
   }
 
 });
+//########## hasta aqui termina el usuario de loguearse o desloguearse
 
 //crear cuenta con tu email y password
 function createUser(suemail, supassword) {
