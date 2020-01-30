@@ -31,6 +31,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else{
     location.hash = "#/FormCount";
   }
+
 });
 //########## hasta aqui termina el usuario de loguearse o desloguearse
 
@@ -96,5 +97,5 @@ export {
   autEmailPass,
   createUser,
   sign_socialNewtwork,
-  signOutU
+  signOutU,
 }

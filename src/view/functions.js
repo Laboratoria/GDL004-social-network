@@ -1,11 +1,11 @@
 / Get the modal
-var modal = document.getElementById("myModal");  
+var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("postBtn");let btnCloseModal = document.getElementById("postBtn_enter");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("Close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function showModal() {

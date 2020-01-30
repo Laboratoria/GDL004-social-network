@@ -20,7 +20,7 @@ const btnSignInUp = () => {
     containerBtn.appendChild(btnSignIn);
     containerBtn.appendChild(btnSignUp);
 
-    document.body.appendChild( containerBtn);
+    document.body.appendChild(containerBtn);
 
     return btnSignInUp;
 }
@@ -71,7 +71,7 @@ const headerMenu = () => {
     const headerNav = document.createElement("header");
     headerNav.setAttribute('class', 'header_nav top');
     document.body.appendChild(headerNav);
-    const listNav = document.createElement("ul"
+    const listNav = document.createElement("ul");
     listNav.setAttribute("class", "header_nav_list");
     document.body.appendChild(listNav);
     const liHeaderNavUser = document.createElement("li");
@@ -124,7 +124,7 @@ function signUpForm() {
   }
 
   function showModal() {
-    const modal = document.getElementById("postModal");
+    const modal = document.getElementById("myModal");
     const btn = document.getElementById("postBtn");
     const span = document.getElementsByClassName("close")[0];
     modal.style.display = "block";

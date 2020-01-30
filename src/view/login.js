@@ -1,5 +1,5 @@
 import { autEmailPass, sign_socialNewtwork } from '../models/auth.js';
-import { btnSignInUp } from './commonElements.js';
+import { btnSignInUp, enabled } from './commonElements.js';
 
 var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -78,7 +78,7 @@ export default () => {
 
     //############div con boton entrar con google
     const btngoogle = document.createElement("BUTTON")
-    btngoogle.innerHTML = "Sign in with GoogleChrome";
+    btngoogle.innerHTML = "Sign in whith your Google Account";
     btngoogle.onclick = signGoogle;
     btngoogle.setAttribute('id', 'btn_sign_in_google');
     btngoogle.setAttribute('class', 'btn')
@@ -104,10 +104,10 @@ export default () => {
     container.appendChild(formu);
     document.body.appendChild(container)
 
-    if (!enabled){
-    btnSignInUp();
-}
-    btnSignInUp.innerHTML=""
+    if(!enabled){
+      btnSignInUp();
+    }
+    btnSignInUp.innerHTML = ""
     return container; //a�adimos el formulario...
 
 };
