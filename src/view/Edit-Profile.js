@@ -1,5 +1,5 @@
 import {navbar} from './commonElements.js';
-import {headerMenu} from './commonElements.js'; 
+import {headerMenu} from './commonElements.js';
 
 
 export default () => {

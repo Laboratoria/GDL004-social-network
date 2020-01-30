@@ -1,24 +1,54 @@
 import { createUser } from '../models/auth.js';
-import {btnSingInUp} from './commonElements.js';
+import {btnSignInUp} from './commonElements.js';
 
-const singup = () => {
-   // const suname = document.getElementById('su_name').value
-    //const sulastname = document.getElementById('su_lastname').value
+const signup = () => {
+    const suname = document.getElementById('su_name').value
+    const sulastname = document.getElementById('su_lastname').value
     const suemail = document.getElementById('su_email').value;
     const supassword = document.getElementById('su_password').value;
       if (suemail != "" || supassword != "") {
         //console.log(sumail + supassword)
-        createUser(suemail, supassword)    }
+        console.log("mandnandooo", suname, sulastname)
+        createUser(suemail, supassword,  suname, sulastname)
+        /*const divSignUp =document.querySelector('#divSignUp');
+      db.collection('users').add({
+        userName: divSignUp.suname.value,
+        userEmail: divSignUp.suemail.value
+      }) .then(function(docRef){
+        console.log(docRef.id);
+      }) }*/
+
 };
+}
+function savingUsers(){
+  const divSignUp = document.querySelector("#divsignup");
+  const btnSignUp = document.querySelector('#btn_sign_up');
+  btnSignUp.addEventListener('click', (e) =>{
+  e.preventDefault();
+  db.collection('users').add({
+    userName: divSignUp.suname.value,
+    userEmail:divSignUp.email.value
+  })
+  .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+    console.error("Error adding document: ", error);
+  });
+  console.log(divSingUp.name.value);
+  });
+}
+
 //sing up
 export default () => {
     //ionput para nombre
-    const titleSingUp = document.createElement("h1");
-    titleSingUp.innerHTML ="Sing Up"
+    const titleSignUp = document.createElement("h1");
+    titleSignUp.innerHTML ="Sign Up"
     const inputsu_name = document.createElement("input");
     inputsu_name.innerHTML = "su_name";
     inputsu_name.setAttribute("placeholder", "First name")
     inputsu_name.setAttribute("id", "su_name");
+    inputsu_name.setAttribute("name", "name");
     inputsu_name.setAttribute("class", "inputs");
     document.body.appendChild(inputsu_name);
     //input para apellido
@@ -31,9 +61,10 @@ export default () => {
     //input para email
     const inputsu_email = document.createElement("input");
     inputsu_email.innerHTML = "su_email";
-    inputsu_email.setAttribute("placeholder", "Email address")
+    inputsu_email.setAttribute("placeholder", "Email address");
     inputsu_email.setAttribute("type", "email");
     inputsu_email.setAttribute("id", "su_email");
+    inputsu_email.setAttribute("name", "email");
     inputsu_email.setAttribute("class", "inputs");
     document.body.appendChild(inputsu_email);
     //input para contrase;a
@@ -46,26 +77,27 @@ export default () => {
     document.body.appendChild(inputsu_password);
     //boton para regristarse
     const btn = document.createElement("BUTTON");
-    btn.innerHTML = "Sing up";
-    btn.onclick = singup;
-    btn.setAttribute('id', 'btn_sing_up');
+    btn.innerHTML = "Sign up";
+    btn.onclick = signup;
+    btn.setAttribute('id', 'btn_sign_up');
     btn.setAttribute('class', 'btn')
     document.body.appendChild(btn);
 
     //div que lo contiene
-    const divsingup = document.createElement("div");
-    divsingup.setAttribute('id', 'divsingup');
-    divsingup.setAttribute("class", "login_container");
+    const divsignup = document.createElement("div");
+    divsignup.setAttribute('id', 'divsignup');
+    divsignup.setAttribute("class", "login_container");
     const container = document.createElement("section");
-    divsingup.appendChild( titleSingUp);
-    divsingup.appendChild(inputsu_name);
-    divsingup.appendChild(inputsu_lastname);
-    divsingup.appendChild(inputsu_email);
-    divsingup.appendChild(inputsu_password);
-    divsingup.appendChild(btn);
-    container.appendChild(divsingup)
+    divsignup.appendChild( titleSignUp);
+    divsignup.appendChild(inputsu_name);
+    divsignup.appendChild(inputsu_lastname);
+    divsignup.appendChild(inputsu_email);
+    divsignup.appendChild(inputsu_password);
+    divsignup.appendChild(btn);
+    container.appendChild(divsignup)
     document.body.appendChild(container);
     container.setAttribute("class", "container_grid_login");
-    btnSingInUp();
+    btnSignInUp();
+    savingUsers();
     return container;
 }
