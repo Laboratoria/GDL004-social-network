@@ -1,12 +1,7 @@
-import {
-    autEmailPass,
-    sign_socialNewtwork
-} from '../models/auth.js';
-import {
-    btnSignInUp
-} from './commonElements.js';
+import { autEmailPass, sign_socialNewtwork } from '../models/auth.js';
+import { btnSignInUp } from './commonElements.js';
 
-
+var provider = new firebase.auth.GoogleAuthProvider();
 
 const login = () => {
     const errorSpan = document.getElementById("formError");
@@ -35,12 +30,23 @@ const login = () => {
 
 }
 const signGoogle = () => {
-    console.log("konda")
-    const provider = new firebase.auth.GoogleAuthProvider();
-    //provider = new firebase.auth.GoogleAuthProvider();
-    sign_socialNewtwork(provider)
-    history.pushState("home.js", "home", "#/Home");
-    window.history.go();
+  console.log("konda")
+ firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
 
 }
 export default () => {
@@ -68,9 +74,9 @@ export default () => {
     btn.onclick = login;
     btn.setAttribute('id', 'btn_sign_in');
     btn.setAttribute('class', 'btn')
-    document.body.appendChild(btn);
+    //document.body.appendChild(btn);
 
-    //div con boton entrar con google
+    //############div con boton entrar con google
     const btngoogle = document.createElement("BUTTON")
     btngoogle.innerHTML = "Sign in with GoogleChrome";
     btngoogle.onclick = signGoogle;
@@ -85,28 +91,19 @@ export default () => {
     divbtns.appendChild(btngoogle);
     const container = document.createElement("section");
     container.setAttribute("class", "container_grid_login");
+     // creamos el formulario
     const formu = document.createElement("div");
-    formu.setAttribute('id', 'form-signIn'); // creamos el formulario
+    formu.setAttribute('id', 'form-signIn');
     formu.setAttribute("class", "login_container form__group")
-
     formu.appendChild(welcomeName);
     formu.appendChild(inputEmail);
     formu.appendChild(inputPassword);
     formu.appendChild(diverror)
     formu.appendChild(btn);
     formu.appendChild(divbtns)
-
-
     container.appendChild(formu);
     document.body.appendChild(container)
 
-    // const message = document.createElement("div")
-    // message.setAttribute("id", "alert")
-    // const text = document.createElement("p")
-    // text.setAttribute("id", "textoAlert")
-    // text.innerHTML = "constesta las cuadros de amarillo"
-    // message.appendChild(text)
-    // document.boddy.appendChild(message)
     if (!enabled){
     btnSignInUp();
 }

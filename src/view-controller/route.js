@@ -1,14 +1,11 @@
 import {
     components
 } from '../view/index.js';
-//import  {login } from '../view/login.js';
+
 const changeView = (route) => {
     const container = document.getElementById('container')
     container.innerHTML = "";
-    // const formCreate = document.getElementById('form-signIn');
-    // formCreate.innerHTML ='';
-    // login()
-    console.log(route);
+
     switch (route) {
 
         case "#/FormCount":
@@ -32,6 +29,4 @@ const changeView = (route) => {
     return null;
 }
 
-export {
-    changeView
-}
+export { changeView }

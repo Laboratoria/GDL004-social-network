@@ -6,20 +6,19 @@ const signup = () => {
     const sulastname = document.getElementById('su_lastname').value
     const suemail = document.getElementById('su_email').value;
     const supassword = document.getElementById('su_password').value;
-      if (suemail != "" || supassword != "") {
-        //console.log(sumail + supassword)
-        console.log("mandnandooo", suname, sulastname)
-        createUser(suemail, supassword,  suname, sulastname)
-        /*const divSignUp =document.querySelector('#divSignUp');
-      db.collection('users').add({
-        userName: divSignUp.suname.value,
-        userEmail: divSignUp.suemail.value
-      }) .then(function(docRef){
-        console.log(docRef.id);
-      }) }*/
-
-};
+    if (suname === "" || sulastname === ""){
+      errorSpan.innerHTML = "Your email is incorrect";
+      document.getElementById("su_name").style.borderColor = "yellow";
+      document.getElementById("su_lastname").style.borderColor = "yellow";
+    }else if (suemail === "" || supassword === ""){
+      errorSpan.innerHTML = "Your email is incorrect";
+      document.getElementById("su_email").style.borderColor = "yellow";
+      document.getElementById("su_password").style.borderColor = "yellow";
+    }
+    console.log(suemail + supassword)
+    createUser(suemail, supassword)
 }
+
 function savingUsers(){
   const divSignUp = document.querySelector("#divsignup");
   const btnSignUp = document.querySelector('#btn_sign_up');
@@ -48,7 +47,6 @@ export default () => {
     inputsu_name.innerHTML = "su_name";
     inputsu_name.setAttribute("placeholder", "First name")
     inputsu_name.setAttribute("id", "su_name");
-    inputsu_name.setAttribute("name", "name");
     inputsu_name.setAttribute("class", "inputs");
     document.body.appendChild(inputsu_name);
     //input para apellido
@@ -62,9 +60,8 @@ export default () => {
     const inputsu_email = document.createElement("input");
     inputsu_email.innerHTML = "su_email";
     inputsu_email.setAttribute("placeholder", "Email address");
-    inputsu_email.setAttribute("type", "email");
     inputsu_email.setAttribute("id", "su_email");
-    inputsu_email.setAttribute("name", "email");
+    inputsu_email.setAttribute("type", "email");
     inputsu_email.setAttribute("class", "inputs");
     document.body.appendChild(inputsu_email);
     //input para contrase;a
@@ -76,28 +73,32 @@ export default () => {
     inputsu_password.setAttribute("class", "inputs");
     document.body.appendChild(inputsu_password);
     //boton para regristarse
-    const btn = document.createElement("BUTTON");
-    btn.innerHTML = "Sign up";
-    btn.onclick = signup;
-    btn.setAttribute('id', 'btn_sign_up');
-    btn.setAttribute('class', 'btn')
-    document.body.appendChild(btn);
+    // const btn = document.createElement("BUTTON");
+        // btn.innerHTML = "Sign up";
+        // btn.onclick = signup;
+        // btn.setAttribute('id', 'btn_sign_up');
+        // btn.setAttribute('class', 'btn')
+        // document.body.appendChild(btn);
+        //div error
+        const diverror = document.createElement("span")
+        diverror.setAttribute("id", "formError")
 
     //div que lo contiene
     const divsignup = document.createElement("div");
     divsignup.setAttribute('id', 'divsignup');
     divsignup.setAttribute("class", "login_container");
+
     const container = document.createElement("section");
     divsignup.appendChild( titleSignUp);
     divsignup.appendChild(inputsu_name);
     divsignup.appendChild(inputsu_lastname);
     divsignup.appendChild(inputsu_email);
     divsignup.appendChild(inputsu_password);
-    divsignup.appendChild(btn);
+    //divsignup.appendChild(btn);
     container.appendChild(divsignup)
-    document.body.appendChild(container);
     container.setAttribute("class", "container_grid_login");
-    btnSignInUp();
-    savingUsers();
+    document.body.appendChild(container);
+    //btnSignInUp();
+    btnSignInUp.innerHTML = ""
     return container;
 }

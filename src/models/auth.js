@@ -11,7 +11,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     var uid = user.uid;
     var providerData = user.providerData;
     location.hash = "#/Home";
-    console.log("estas logeado " + email)
     //###### Agrega el user a la collection  #################
    db.collection("users").add({
       userName: name,
@@ -19,7 +18,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       photoURL : photoURL
     })
     .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
+        //console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -27,17 +26,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     //#####   Fin de agregar user a collection  ##############
 
   //###### esto se ejecuta cuando el user no esta logueado ######
-
   } else if(!user){
     location.hash = "#/Login";
-
-    console.log("no estas logiueado"+ email)
   } else{
     location.hash = "#/FormCount";
-
-    console.log("no estas logiueado"+ email)
   }
-
 });
 //########## hasta aqui termina el usuario de loguearse o desloguearse
 
@@ -46,28 +39,12 @@ function createUser(suemail, supassword, suname, sulastname) {
   console.log("recibiendo prross" ,suname, sulastname)
   firebase.auth().createUserWithEmailAndPassword(suemail, supassword)
   .then( function(){
-
-    /*  db.collection("users").add({
-        name : suname.value,
-        email: suemail.value,
-        photoURL : photoURL
-      })
-      .then(function(docRef) {
-          console.log("Document written with ID: ", docRef.id);
-      })
-      .catch(function(error) {
-          console.error("Error adding document: ", error);
-      });*/
-    history.pushState("home.js", "home", "#/Home");
-        window.history.go();
-
   })
-  /*.catch(function (error) {
+    .catch(function (error) {
     let errorCode = error.code;
     let errorMessage = error.message;
   })
-*/
-    }
+}
 
 function autEmailPass(email, password) {
   firebase.auth().signInWithEmailAndPassword(email, password).then(result => {
@@ -94,7 +71,6 @@ function sign_socialNewtwork(provider) {
   firebase.auth().getRedirectResult().then(function (result) {
       if (result.credential) {
         let token = result.credential.accessToken;
-
       }
       let user = result.user;
 
@@ -104,23 +80,17 @@ function sign_socialNewtwork(provider) {
       let errorMessage = error.message;
       let email = error.email;
       let credential = error.credential;
-
     });
 }
 
 function signOutU(){
-  console.log("salteee Prroo")
   firebase.auth().signOut()
   .then(function(){
-      console.log("salte pa fuera")
     })
   .catch(function (error){
-  console.log(error)
+  //console.log(error)
   });
-
 }
-
-
 
 export {
   autEmailPass,
