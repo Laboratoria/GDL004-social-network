@@ -104,7 +104,7 @@ export default () => {
     container.appendChild(formu);
     document.body.appendChild(container)
 
-    if (!enabled){
+    if(!enabled){
     btnSignInUp();
 }
     btnSignInUp.innerHTML=""

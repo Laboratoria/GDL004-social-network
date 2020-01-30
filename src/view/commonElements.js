@@ -71,7 +71,7 @@ const headerMenu = () => {
     const headerNav = document.createElement("header");
     headerNav.setAttribute('class', 'header_nav top');
     document.body.appendChild(headerNav);
-    const listNav = document.createElement("ul"
+    const listNav = document.createElement("ul");
     listNav.setAttribute("class", "header_nav_list");
     document.body.appendChild(listNav);
     const liHeaderNavUser = document.createElement("li");
