@@ -1,7 +1,7 @@
 function registrar(){
-  let email=document.getElementById('email').value;
-  let pass=document.getElementById('pass').value;
-  alert("email"+email+"pass"+pass);
+  let useremail=document.getElementById('useremail').value;
+  let password=document.getElementById('password').value;
+  alert("useremail"+useremail+"password"+password);
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -16,16 +16,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     var isAnonymus = user.isAnonymus;
     var uid = user.uid;
     var provider = user.providerData;
-    document.getElementById('loguin').innerHTML="logueado"+;
-    
-  } else{
-
+    document.getElementById('loguin').innerHTML="logueado"+
   }
 });
 
 function enviar(){
-  var email = document.getElementById("email").value;
-  var pass = document.getElementById("pass").value;
+  var email = document.getElementById("useremail").value;
+  var pass = document.getElementById("password").value;
 
 
 }
