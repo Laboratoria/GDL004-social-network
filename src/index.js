@@ -1,3 +1,35 @@
+function registrar(){
+  let email=document.getElementById('email').value;
+  let pass=document.getElementById('pass').value;
+  alert("email"+email+"pass"+pass);
+}
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    console.log(email);
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymus = user.isAnonymus;
+    var uid = user.uid;
+    var provider = user.providerData;
+    document.getElementById('loguin').innerHTML="logueado"+;
+    
+  } else{
+
+  }
+});
+
+function enviar(){
+  var email = document.getElementById("email").value;
+  var pass = document.getElementById("pass").value;
+
+
+}
+var dbRef = firebase.database().ref('/users/' + uid);
 /* import {autEmailPass} from './models/auth.js';
 const formulario= document.getElementById('form-signIn');
 const btnLogIn = document.getElementById('btn_sing_in');
