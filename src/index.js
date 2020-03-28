@@ -4,7 +4,7 @@ function registrar(){
   alert("useremail"+useremail+"password"+password);
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
+/*firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
 
     // User is signed in.
@@ -16,15 +16,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     var isAnonymus = user.isAnonymus;
     var uid = user.uid;
     var provider = user.providerData;
-    document.getElementById('loguin').innerHTML="logueado"+
+    //document.getElementById('login').innerHTML="logueado"+
   }
-});
+})
 
-function enviar(){
+/*function enviar(){
   var email = document.getElementById("useremail").value;
   var pass = document.getElementById("password").value;
-
-
 }
 var dbRef = firebase.database().ref('/users/' + uid);
 /* import {autEmailPass} from './models/auth.js';
