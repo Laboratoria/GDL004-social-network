@@ -1,4 +1,4 @@
-import { spaComponents } from '..view/index.js'
+import { spaComponents } from '.view/index.js'
 
 const changeView = (routes) => {
     const container = document.getElementById('container')
