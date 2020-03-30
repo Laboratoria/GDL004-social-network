@@ -1,9 +1,10 @@
-import userHome from './home.js';
-import userProfile from './userProfile.js';
+import home from './home.js';
+import profile from './userProfile.js';
 
 const components = {
-  home: userHome,
-  userProfile: userProfile
+  home: home,
+  user: profile,
+  notification:profile,
 }
 
 export { components }

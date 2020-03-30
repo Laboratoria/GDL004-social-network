@@ -4,28 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <link rel="stylesheet" href="style.css">
   <title>DEAL</title>
 </head>
   <body>
-    <div class="container">
-      <div class="main">
-      <!--agregar logo de pagina web-->
-      <!--agregar about-->
-      <!--poner otro vcontiner para aplicar css como el prototipo figma--> 
-        <form id="form_id" method="post" name="myform">
-          <input type="text" placeholder="email" id="useremail"/>
-          <input type="password" placeholder="password" id="password"/>
-          <input type="button" value="Login" id="submit" onclick="validate()"/>
-        </form>
+ <!-------------------------------------template para SIGN IN ------------------------------------ -
+    <div class="login-wrap">
+      <div class="login-html">
+      <h1> DEAL </H1>
+      <input id="tab-1" type="radio" name="tab" class="signin" checked><label for="tab-1" class="tab">Sign In</label>
+      <input id="tab-2" type="radio" name="tab" class="signUp"><label for="tab-2" class="tab">Sign Up</label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+          <div class="group">
+            <input type="email" placeholder="EMAIL..." id="userEmail" class="input">
+            <br>
+            <input type="password" placeholder="PASSWORD"id="userPassword" class="input" data-type="password">
+            <br>
+            <input id="check" type="checkbox" class="check" checked>
+            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+            <br>
+            <input type="submit" class="button" value="Sign In">
+          </div>
+        </div>
+      
+
+  <--------------------------------template para SIGN UP---------------------------------------------
+        <div class="sign-up-htm">
+          <div class="group">
+            <input id="user" placeholder="USERNAME" class="input">
+            <br>
+            <input id="signUpPass" placeholder="PASSWORD" class="input" data-type="password">
+            <br>
+            <input id="signUpPass" placeholder=" REPEAT PASSWORD" class="input" data-type="password">
+            <br>
+            <input id="signUpPass" placeholder=" EMAIL ADDRESS" class="input">
+            <br>
+            <a href="#/home"><input type="submit" class="button" value="Sign Up"></a>
+          </div>
+        </div>
       </div>
-    </div>
+      </div>
+  </div-->
+
+
+
+    <!-------------------------------------------------------------------------
+    --------------------------------------------------------------------------->
 
     <header class='navigationBar' id="myNavBar">
         <nav>
           <!--agregar logo de pagina web-->
           <!--input type="search" placeholder="search" id="search"></input-->
-          <!--a href='#/Sign Out'>Sign Out</a-->
           <a href='#/Notifications'>Notifications</a>
           <a href='#/User'>User</a>
           <a href='#/Home'>Home</a>
@@ -35,33 +66,31 @@
     
     <section id='container'></section>
     <footer></footer>
-  
-      <script type="module" src="./main.js"></script>
     
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-      <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
-
-      <!-- TODO: Add SDKs for Firebase products that you want to use
-          https://firebase.google.com/docs/web/setup#available-libraries -->
-      <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
-     
-      <script>
-       // Your web app's Firebase configuration
-       var firebaseConfig = {
-         apiKey: "AIzaSyCnQ31KbCMulCxtCuFoBtLaQ3lw76l7wwI",
-         authDomain: "deal-b4259.firebaseapp.com",
-         databaseURL: "https://deal-b4259.firebaseio.com",
-         projectId: "deal-b4259",
-         storageBucket: "deal-b4259.appspot.com",
-         messagingSenderId: "541545225912",
-         appId: "1:541545225912:web:6bc45c07fc362a638b5e4d",
-         measurementId: "G-MS1DQ2F5PX"
-       };
-       // Initialize Firebase
-       firebase.initializeApp(firebaseConfig);
-       //console.log(proy.name);
-       firebase.analytics();
-      </script>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./authentication.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    //https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+    <script>
+     // Your web app's Firebase configuration
+     var firebaseConfig = {
+       apiKey: "AIzaSyCnQ31KbCMulCxtCuFoBtLaQ3lw76l7wwI",
+       authDomain: "deal-b4259.firebaseapp.com",
+       databaseURL: "https://deal-b4259.firebaseio.com",
+       projectId: "deal-b4259",
+       storageBucket: "deal-b4259.appspot.com",
+       messagingSenderId: "541545225912",
+       appId: "1:541545225912:web:6bc45c07fc362a638b5e4d",
+       measurementId: "G-MS1DQ2F5PX"
+     };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     //console.log(proy.name);
+     firebase.analytics();
+    </script>
   </body>
 </html>
 
