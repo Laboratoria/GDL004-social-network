@@ -4,8 +4,8 @@ export default () => {
         aqui van a cargar todos los post de los usuarios 
         </h1>
         `
-        const elemntContainer = document.createElement('div')
-        elemntContainer.innerHtml = viewHome;
-
-        return elemntContainer;
-}
+    const divElemt = document.createElement('div');
+    divElemt.classList.add('position')
+    divElemt.innerHTML = viewHome;
+    return divElemt;
+};

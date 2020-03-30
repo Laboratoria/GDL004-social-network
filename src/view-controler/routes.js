@@ -1,18 +1,19 @@
-import { spaComponents } from '.view/index.js'
+import { components } from '../view/index.js'
 
-const changeView = (routes) => {
+export const changeView = (hash) => {
     const container = document.getElementById('container')
-    container.innerHTML = '';
+    container.innerHTML = "";
 
-    switch(routes){
-        case'#/':
-           container.appendChild(spaComponents.home())
-        case'#/': 
-            { return container.appendChild(spaComponents.userProfile())}
-        default:
+
+    switch(hash){
+        case '#/Home':
+            container.appendChild(components.home())
             break;
-    }
-    console.log(routes)
+        case '#/Profile':
+            container.appendChild(components.profile())
+            break;
+        }
+    console.log(hash)
 }
 
-export {changeView}
+

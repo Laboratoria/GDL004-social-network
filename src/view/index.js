@@ -1,10 +1,9 @@
-import Home from './home.js';
-import User from './userProfile.js';
+import userHome from './home.js';
+import userProfile from './userProfile.js';
 
-
-const spaComponents = {
-  home: Home,
-  userProfile: User
+const components = {
+  home: userHome,
+  userProfile: userProfile
 }
 
-export {spaComponents}
+export { components }
