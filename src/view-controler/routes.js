@@ -2,12 +2,14 @@ import { components } from '../view/index.js'
 
 export const changeView = (hash) => {
     const container = document.getElementById('container')
-    container.innerHTML = ""
+    container.innerHTML = '';
 
 
     switch(hash){
-        // /user
-          //lo que entra como hash es la variable que llega por medio de parametros 
+        // agregar el login signup
+        case '':
+            container.appendChild(components.signInUp())
+            break;
         case '#/Home':
             container.appendChild(components.home())
             break;
@@ -15,8 +17,9 @@ export const changeView = (hash) => {
             container.appendChild(components.user())
             break;
         case '#/Notifications':
-            container.appendChild(components.profile())
+            //container.appendChild(components.notifications())
             break
+    
         }
         
 

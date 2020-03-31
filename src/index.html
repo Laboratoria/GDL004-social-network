@@ -9,51 +9,9 @@
   <title>DEAL</title>
 </head>
   <body>
- <!-------------------------------------template para SIGN IN ------------------------------------ -
-    <div class="login-wrap">
-      <div class="login-html">
-      <h1> DEAL </H1>
-      <input id="tab-1" type="radio" name="tab" class="signin" checked><label for="tab-1" class="tab">Sign In</label>
-      <input id="tab-2" type="radio" name="tab" class="signUp"><label for="tab-2" class="tab">Sign Up</label>
-      <div class="login-form">
-        <div class="sign-in-htm">
-          <div class="group">
-            <input type="email" placeholder="EMAIL..." id="userEmail" class="input">
-            <br>
-            <input type="password" placeholder="PASSWORD"id="userPassword" class="input" data-type="password">
-            <br>
-            <input id="check" type="checkbox" class="check" checked>
-            <label for="check"><span class="icon"></span> Keep me Signed in</label>
-            <br>
-            <input type="submit" class="button" value="Sign In">
-          </div>
-        </div>
-      
+    <header>
 
-  <--------------------------------template para SIGN UP---------------------------------------------
-        <div class="sign-up-htm">
-          <div class="group">
-            <input id="user" placeholder="USERNAME" class="input">
-            <br>
-            <input id="signUpPass" placeholder="PASSWORD" class="input" data-type="password">
-            <br>
-            <input id="signUpPass" placeholder=" REPEAT PASSWORD" class="input" data-type="password">
-            <br>
-            <input id="signUpPass" placeholder=" EMAIL ADDRESS" class="input">
-            <br>
-            <a href="#/home"><input type="submit" class="button" value="Sign Up"></a>
-          </div>
-        </div>
-      </div>
-      </div>
-  </div-->
-
-
-
-    <!-------------------------------------------------------------------------
-    --------------------------------------------------------------------------->
-
-    <header class='navigationBar' id="myNavBar">
+      <div class='navigationBar' id="myNavBar">
         <nav>
           <!--agregar logo de pagina web-->
           <!--input type="search" placeholder="search" id="search"></input-->
@@ -65,23 +23,31 @@
     </header>
     
     <section id='container'></section>
-    <footer></footer>
+   
+
+    <script type="module" src="./firebaseConfig.js"></script>
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./authentication.js"></script>
+    
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
     //https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
-    //console.log(proy.name);
-    firebase.analytics();
-  </script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA3uZ_GXKUSFCzmWis-YZZs6EXsCEdaTxo",
+        authDomain: "ejemplo-fb0ee.firebaseapp.com",
+        databaseURL: "https://ejemplo-fb0ee.firebaseio.com",
+        projectId: "ejemplo-fb0ee",
+        storageBucket: "ejemplo-fb0ee.appspot.com",
+        messagingSenderId: "928460971804",
+        appId: "1:928460971804:web:0d248cc2a3930dc253e4d9",
+        measurementId: "G-ZBV7FY3M2M"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
-function login(){
-  let userEmail = document.getElementById('userEmail').value;
-  let userPass = document.getElementById('userPassword').value;
-
-  window.alert(userEmail + "" userPass);
-}
-
