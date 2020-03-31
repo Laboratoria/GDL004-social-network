@@ -66,7 +66,6 @@
     
     <section id='container'></section>
     <footer></footer>
-    
     <script type="module" src="./main.js"></script>
     <script type="module" src="./authentication.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -74,24 +73,15 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
     //https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
-    <script>
-     // Your web app's Firebase configuration
-     var firebaseConfig = {
-       apiKey: "AIzaSyCnQ31KbCMulCxtCuFoBtLaQ3lw76l7wwI",
-       authDomain: "deal-b4259.firebaseapp.com",
-       databaseURL: "https://deal-b4259.firebaseio.com",
-       projectId: "deal-b4259",
-       storageBucket: "deal-b4259.appspot.com",
-       messagingSenderId: "541545225912",
-       appId: "1:541545225912:web:6bc45c07fc362a638b5e4d",
-       measurementId: "G-MS1DQ2F5PX"
-     };
-     // Initialize Firebase
-     firebase.initializeApp(firebaseConfig);
-     //console.log(proy.name);
-     firebase.analytics();
-    </script>
+    //console.log(proy.name);
+    firebase.analytics();
+  </script>
   </body>
 </html>
+function login(){
+  let userEmail = document.getElementById('userEmail').value;
+  let userPass = document.getElementById('userPassword').value;
 
+  window.alert(userEmail + "" userPass);
+}
 
