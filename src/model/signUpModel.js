@@ -1,9 +1,10 @@
-import initfb from '../firebaseConfig.js'
+import initfb from './model/firebaseConfig.js'
 import { components } from '../view/index.js'
 
 console.log('llegue signUp.js')
 let email;
 let password;
+
 function registerUser(){
 
 	const email = document.getElementById("email");
@@ -25,9 +26,8 @@ function registerUser(){
 		auth.signInWithEmailAndPassword(email, password);
 	  }
 	  function logoutUser() {
-		email = email.value;
-		password = password.value;
-		auth.signInWithEmailAndPassword(email, password);
+//falta implementar la funcion de logout
+
 	  }
 	
 	  auth.onAuthStateChanged(firebaseUser => {

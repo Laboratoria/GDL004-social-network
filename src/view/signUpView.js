@@ -2,7 +2,7 @@
 
 export default (container, state) => {
 
-  const signInUpOut = `
+  const signUpView = `
   <h1>DEAL</h1>
     <div id="formContainer" class="signInUpOut">
       <div id="header"></div>
@@ -14,7 +14,7 @@ export default (container, state) => {
     </div>
 `
 const divElemt = document.createElement('div');
-divElemt.innerHTML = signInUpOut;
+divElemt.innerHTML = signUpView;
 return divElemt;
 };
 

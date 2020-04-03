@@ -1,4 +1,3 @@
-import { components } from '../view/index.js'
   // Your web app's Firebase configuration
   const initfb = () => {
   
