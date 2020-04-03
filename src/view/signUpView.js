@@ -1,15 +1,15 @@
-//import {logIn} from '../controller/signUp.js';
+import signUpController from '../view-controler/signUpControler.js';
 
-export default (container, state) => {
+export const signUpView = () => {
 
-  const signUpView = `
+const signUpView = `
   <h1>DEAL</h1>
     <div id="formContainer" class="signInUpOut">
       <div id="header"></div>
         <input type="email" placeholder="email" id="email"/>
         <input type="password" placeholder="password" id="password"/>
-        <button  id="signUp"> Sign Up</button>
-        <button  id="signIn"> Sign In</button>
+        <button  id="signUpBtn"> Sign Up</button>
+        <button  id="signInBtn"> Sign In</button>
         <button  id="signOut"> Sign Out</button>
     </div>
 `
@@ -18,4 +18,18 @@ divElemt.innerHTML = signUpView;
 return divElemt;
 };
 
+export const eventSignUp = () => {
+  const email = document.getElementById("email");
+	const password = document.getElementById("password");
+	const signUpBtn = document.getElementById("signUpBtn");
+	const signInBtn = document.getElementById("signInBtn");
+	const signOutBtn = document.getElementById("signOutBtn");
+console.log(email, password);
+  signUpBtn.addEventListener('click', () => {
+    signUpController(email.value, password.value);
+    console.log("hola");
+    
+  })
 
+
+}

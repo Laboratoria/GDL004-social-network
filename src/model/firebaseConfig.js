@@ -1,5 +1,4 @@
-  // Your web app's Firebase configuration
-  const initfb = () => {
+export const initfb = () => {
   
     const firebaseConfig = {
     apiKey: "AIzaSyCnQ31KbCMulCxtCuFoBtLaQ3lw76l7wwI",
@@ -14,7 +13,5 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  console.log("se esta ejecutando la configuracion de firebase")
   }
-
-
-export default initfb

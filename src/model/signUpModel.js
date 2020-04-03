@@ -1,25 +1,16 @@
-import initfb from './model/firebaseConfig.js'
-import { components } from '../view/index.js'
 
-console.log('llegue signUp.js')
-let email;
-let password;
 
-function registerUser(){
+export default registerUser = (email, password) =>{
 
-	const email = document.getElementById("email");
-	const password = document.getElementById("password");
-	const signUpBtn = document.getElementById("signUpBtn");
-	const signInBtn = document.getElementById("signInBtn");
-	const signOutBtn = document.getElementById("signOutBtn");
-	
-		email = email.value;
-		password = password.value;
-		
-		
-		auth.createUserWithEmailAndPassword(email, password);
+	console.log(email, password);
+	//auth.createUserWithEmailAndPassword(email, password);
  } 
-	  function loginUser() {
+
+
+
+
+
+	 /* function loginUser() {
 		email = email.value;
 		password = password.value;
 	
@@ -37,8 +28,6 @@ function registerUser(){
 		else {
 		 console.log('not logged in')
 		}
-	  });
-	signInBtn.addEventListener('click', ignIn)
-	signUpBtn.addEventListener('click', signUp)
-	signOuttn.addEventListener('click', signOut)
+	  });*/
+	
 

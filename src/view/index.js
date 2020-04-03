@@ -1,6 +1,7 @@
 import home from './home.js';
 import profile from './userProfile.js';
-import signUpView from './signUpView.js';
+import {signUpView, eventSignUp} from './signUpView.js';
+
 
 const components = {
   signUpView: signUpView,
@@ -9,5 +10,9 @@ const components = {
 
 }
 
+const eventsElements = {
+  signUpEvent: eventSignUp,
 
-export { components }
+}
+
+export { components, eventsElements }

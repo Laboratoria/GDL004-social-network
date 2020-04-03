@@ -1,5 +1,5 @@
-import { components } from '../view/index.js';
-import { initfb }from '..model/firebaseConfig.js'
+import { components, eventsElements } from '../view/index.js';
+//import { initfb }from '../model/firebaseConfig.js'
 
 export const changeView = (hash, state) => {
     const container = document.getElementById('container')
@@ -10,6 +10,7 @@ export const changeView = (hash, state) => {
         // agregar el login signup
         case '':
             container.appendChild(components.signUpView())
+            eventsElements.signUpEvent();
             break;
         case '#/Home':
             container.appendChild(components.home())
@@ -21,8 +22,7 @@ export const changeView = (hash, state) => {
             //container.appendChild(components.notifications())
             break
     
-        }
-        
+        }    
 
     console.log(hash)
     return null
