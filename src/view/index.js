@@ -1,9 +1,9 @@
 import home from './home.js';
 import profile from './userProfile.js';
-import signInUp from './signInUp.js';
+import signInUpOut from './signUp.js';
 
 const components = {
-  signInUp: signInUp,
+  signInUpOut: signInUpOut,
   home: home,
   user: profile,
 

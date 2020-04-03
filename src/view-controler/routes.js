@@ -1,6 +1,6 @@
 import { components } from '../view/index.js'
 
-export const changeView = (hash) => {
+export const changeView = (hash, state) => {
     const container = document.getElementById('container')
     container.innerHTML = '';
 
@@ -8,7 +8,7 @@ export const changeView = (hash) => {
     switch(hash){
         // agregar el login signup
         case '':
-            container.appendChild(components.signInUp())
+            container.appendChild(components.signInUpOut())
             break;
         case '#/Home':
             container.appendChild(components.home())
@@ -25,6 +25,6 @@ export const changeView = (hash) => {
 
     console.log(hash)
     return null
-}
+};
 
 
