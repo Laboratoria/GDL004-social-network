@@ -1,6 +1,6 @@
 
 
-export default registerUser = (email, password) =>{
+export const registerUser = (email, password) =>{
 
 	console.log(email, password);
 	//auth.createUserWithEmailAndPassword(email, password);
