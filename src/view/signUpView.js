@@ -1,4 +1,4 @@
-import signUpController from '../view-controler/signUpControler.js';
+import signUpController from '../view-controler/signUpController.js';
 
 export const signUpView = () => {
 
