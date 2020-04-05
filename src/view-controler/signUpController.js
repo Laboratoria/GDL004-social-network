@@ -1,5 +1,5 @@
-import registerUser from '../model/signUpModel.js'
+import {registerUser} from '../model/signUpModel.js'
 
-export default  signUpController = (email, password) => {
+export const signUpController = (email, password) => {
     registerUser(email, password);
 }
