@@ -1,33 +1,34 @@
 
 
+
+function alertMessage(text){
+  text = alert(text);
+  console.log(text);
+}
+function displayError(text){
+  console.log(text);
+}
+
 export const registerUser = (email, password) =>{
-
 	console.log(email, password);
-	//auth.createUserWithEmailAndPassword(email, password);
- } 
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then(function viewProfile() {
+      alertMessage('New user created!');
+    }).catch(displayError);
+}
 
+export const signIn = (emailAcces, passwordAcces) => {
+  firebase.auth().signInWithEmailAndPassword(emailAcces, passwordAcces)
+    .then(function viewHome() {
+      alertMessage('User signed in!');
+    }) .catch(displayError);
+  }
 
+export const signOut = () => {
+  firebase.auth().signOut()
+  .then(function() {
+    alertMessage('User signed out!');
+  }).catch(displayError);
+}
 
-
-
-	 /* function loginUser() {
-		email = email.value;
-		password = password.value;
-	
-		auth.signInWithEmailAndPassword(email, password);
-	  }
-	  function logoutUser() {
-//falta implementar la funcion de logout
-
-	  }
-	
-	  auth.onAuthStateChanged(firebaseUser => {
-		if (firebaseUser) {
-		 console.log('logged in');
-		} 
-		else {
-		 console.log('not logged in')
-		}
-	  });*/
-	
-
+	  
