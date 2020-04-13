@@ -1,7 +1,7 @@
 import { components, eventsElements } from '../view/index.js';
-//import { initfb }from '../model/firebaseConfig.js'
 
-export const changeView = (hash, state) => {
+
+export const changeView = (hash) => {
     const container = document.getElementById('container')
     container.innerHTML = '';
 
@@ -19,7 +19,7 @@ export const changeView = (hash, state) => {
             container.appendChild(components.user())
             break;
         case '#/Notifications':
-            //container.appendChild(components.notifications())
+            container.appendChild(components.notifications())
             break
     
         }    

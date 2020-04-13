@@ -10,7 +10,7 @@ const signUpView = `
       <div id="header"></div>
         <input type="email" placeholder="email" id="email"/>
         <input type="password" placeholder="password" id="password"/>
-        <button  id="signUpBtn"> Sign Up</button>
+        <button  id="signUpBtn"> Sign Up</button><br/>
         <input type="email" placeholder="email" id="emailSigIn" />
         <input type="password"  placeholder="password" id="passwordSigIn" />
         <button  id="signInBtn"> Sign In</button>
@@ -22,9 +22,9 @@ divElemt.innerHTML = signUpView;
 return divElemt;
 };
 
-export const eventSignUpInOut = () => {
-  const email = document.getElementById("email");
-	const password = document.getElementById("password");
+export const eventSignUpIn = () => {
+  const registerEmail = document.getElementById("email");
+	const registerPassword = document.getElementById("password");
   const signUpBtn = document.getElementById("signUpBtn");
   const emailAcces = document.getElementById("emailSigIn");
 	const passwordAcces = document.getElementById("passwordSigIn");
@@ -32,7 +32,7 @@ export const eventSignUpInOut = () => {
 
 //console.log(email, password);
   signUpBtn.addEventListener('click', () => {
-    signUpController(email.value, password.value);
+    signUpController(registerEmail.value, registerPassword.value);
     console.log("hola");
   })
   signInBtn.addEventListener('click', () => {
@@ -45,3 +45,5 @@ export const eventSignUpInOut = () => {
   })
 }
 
+
+ 

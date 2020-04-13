@@ -15,3 +15,5 @@ export const initfb = () => {
   firebase.analytics();
   console.log("se esta ejecutando la configuracion de firebase")
   }
+
+  
