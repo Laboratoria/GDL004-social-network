@@ -11,7 +11,7 @@ export const changeView = (hash) => {
         case '':
             container.appendChild(components.signUpView())
             eventsElements.signUpEvent();
-            break;
+        break;
         case '#/Home':
             container.appendChild(components.home())
             break;

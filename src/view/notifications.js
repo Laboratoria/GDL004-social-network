@@ -3,7 +3,7 @@ export default () => {
      <div class='navigationBar' id="myNavBar">
          <!nav>
                <!--agregar logo de pagina web -->
-           <!--input type="search" placeholder="search" id="search"></input-->
+           <!--input type="search" placeholder="search" id="search" class="sign-in" ></input-->
            <a href='#/Notifications'>Notifications</a>
            <a href='#/User'>User</a>
             <a href='#/Home'>Home</a>

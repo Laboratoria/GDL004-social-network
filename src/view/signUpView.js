@@ -5,18 +5,27 @@ import {signUpController, signInController, signOutController} from '../view-con
 export const signUpView = () => {
 
 const signUpView = `
-  <h1>DEAL</h1>
-    <div id="formContainer" class="signInUpOut">
-      <div id="header"></div>
-        <input type="email" placeholder="email" id="email"/>
-        <input type="password" placeholder="password" id="password"/>
-        <button  id="signUpBtn"> Sign Up</button><br/>
-        <input type="email" placeholder="email" id="emailSigIn" />
-        <input type="password"  placeholder="password" id="passwordSigIn" />
-        <button  id="signInBtn"> Sign In</button>
-        <button  id="signOut"> SignOut</button>
-    </div>
-`
+      <div class="login-box">
+        <h2>D  E  A  L</h2><br>
+        <form>
+            <!-- USERNAME INPUT -->
+            <h1>Register</h1>
+            <input type="email" placeholder="email" id="email" />
+            <!-- PASSWORD INPUT -->
+            <input type="password" placeholder="password" id="password"  />
+            <input type="button" value="Sign Up" id="signUpBtn" >
+            
+            <input type="email" placeholder="email" id="emailSigIn" class="input"/>
+            <input type="password" placeholder="password" id="passwordSigIn" >
+            <input type="button" value="Sign In" id="signInBtn" >
+        </form>
+      </div>
+
+    
+
+              
+              <button  id="signOut"> SignOut</button>
+        `
 const divElemt = document.createElement('div');
 divElemt.innerHTML = signUpView;
 return divElemt;
@@ -33,7 +42,7 @@ export const eventSignUpIn = () => {
 //console.log(email, password);
   signUpBtn.addEventListener('click', () => {
     signUpController(registerEmail.value, registerPassword.value);
-    console.log("hola");
+    console.log("hola signup");
   })
   signInBtn.addEventListener('click', () => {
     signInController(emailAcces.value, passwordAcces.value);
