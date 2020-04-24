@@ -1,0 +1,164 @@
+/*MODAL SIGN IN AND SIGN UP*/
+body {
+  margin:0;
+	background:#777da3;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+.login-box {
+  position: absolute;
+  width: 40%; 
+  height: auto ;
+  background: #131111;
+  color: #b7afc0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 50px 40px;
+  border-radius: 5%;
+}
+
+.login-box input[type="button"]{
+  background:#646b94;
+  color: #b7afc0;
+  border-radius:25px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.login-box h2{
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+}
+.login-box h4{
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.login-box h1{
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.login-box input[type="email"], .login-box input[type="password"] {
+  border: none;
+  border-bottom: 2px solid #1b3d79;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #1b3d79;
+  font-size: 16px;
+}
+
+
+/*#####################BARRA NAVEGADORA DE SPA*#######################*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navigationBar {
+    overflow: hidden;
+    background-color: #646b94;
+  }
+  
+  .navigationBar a {
+    float: right;
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navigationBar #logo-deal {
+    left: 0px;
+    width: 15.5%;
+  }
+  
+  .navigationBar input[type="button"] {
+    float: right;
+    background: #646b94;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navigationBar a:hover {
+    background-color: black;
+    color: #FFFFFF;
+  }
+  
+  .navigationBar .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navigationBar a:not(:first-child) {display: none;}
+    .navigationBar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navigationBar.responsive {position: relative;}
+    .navigationBar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navigationBar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  /*#################### postContainer #####################*/
+  .postContainer {
+  position: absolute;
+  width: 39%; 
+  height: 40% ;
+  background: white;
+  color: #b7afc0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 50px 40px;
+  border-radius: 5%;
+}
+
+.postContainer textarea{
+  background: white;
+  color: #b7afc0;
+  border-radius: 0%;
+}
+
+.postContainer input[type="button"]{
+  background:#9799a8;
+  color: #030303;
+  border-radius:25px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 32%;
+  opacity: 0.9;
+}
