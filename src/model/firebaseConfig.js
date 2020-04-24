@@ -1,3 +1,6 @@
+
+
+
 export const initfb = () => {
   
     const firebaseConfig = {
@@ -13,7 +16,7 @@ export const initfb = () => {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  console.log("se esta ejecutando la configuracion de firebase")
+  console.log( "se esta ejecutando la configuracion de firebase")
   }
 
   

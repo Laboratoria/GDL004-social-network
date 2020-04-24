@@ -1,4 +1,4 @@
-import { components, eventsElements } from '../view/index.js';
+import { components } from '../view/index.js';
 
 
 export const changeView = (hash) => {
@@ -7,16 +7,18 @@ export const changeView = (hash) => {
 
 
     switch(hash){
-        // agregar el login signup
         case '':
             container.appendChild(components.signUpView())
-            eventsElements.signUpEvent();
         break;
         case '#/Home':
             container.appendChild(components.home())
+           // container.appendChild(components.postContainer())
+            //eventsElements.usersPost();
+           // eventsElements.signOut();
             break;
         case '#/User':
             container.appendChild(components.user())
+           //// eventsElements.signOut();
             break;
         case '#/Notifications':
             container.appendChild(components.notifications())
@@ -24,7 +26,7 @@ export const changeView = (hash) => {
     
         }    
 
-    console.log(hash)
+    //console.log(hash)
     return null
 };
 

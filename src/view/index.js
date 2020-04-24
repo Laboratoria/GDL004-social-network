@@ -1,7 +1,9 @@
-import home from './home.js';
+import  home from './home.js';
 import profile from './userProfile.js';
 import notifications from './notifications.js'
-import {signUpView,  eventSignUpIn} from './signUpView.js';
+import {signUpView} from './signUpView.js';
+import  {signOut} from './home.js';
+
 
 
 
@@ -9,11 +11,12 @@ const components = {
   signUpView: signUpView,
   home: home,
   user: profile,
-  notifications: notifications
+  notifications: notifications,
+  
 }
 
 const eventsElements = {
-  signUpEvent: eventSignUpIn
+  signOut: signOut,
 }
 
 export { components, eventsElements }
